@@ -1,0 +1,27 @@
+Objectives:
+You are an astronaut on Mars exploring the Jezero Crater for water formations. 
+
+dust and temperature
+radiation
+Show terrain and elevation of the area
+Show Materials in that area
+Water sources and how water affected and changed the minerals around there
+Create a path-finding algorithm
+Create a 3D - map and a scientific map
+
+Plan for challenge
+
+Collect data from NASA
+Use python to analyze it.
+Output it into files Javascript can read (JSON)
+Create website using JSON data
+
+Data
+
+CTX:  Elevation
+HiRISE: A* path finding and close-up
+USGS: Water deposits
+
+
+
+

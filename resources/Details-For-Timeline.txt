@@ -1,0 +1,90 @@
+Hello everyone,
+
+As we get ready for the NASA Space Apps Challenge on November 14–15, I'd like to share a few helpful resources, upcoming events, and important reminders to help you prepare.
+Before the Hackathon
+
+You're welcome to explore the challenges, gather relevant datasets and resources, learn new tools, and connect with teammates ahead of time. However, project development must not begin before Saturday, November 14, at 9:00 AM local time.
+
+During the hackathon, we'll keep our Philadelphia virtual meeting room available and host a few informal check-ins. You're welcome to join whenever you have questions or want to connect with others, but there's no need to attend every check-in. Feel free to focus on your project!
+
+If you need assistance finding resources or navigating the event, please don't hesitate to reach out.
+
+Most importantly, remember to submit your project before the official deadline: Sunday, November 15, at 11:59 PM local time. Only projects submitted on time can be considered for judging and awards.
+1. Space Apps Connect — Technical Support & Resources
+
+https://github.com/nasa/spaceapps
+
+Space Apps Connect will be available through GitHub Discussions beginning November 3.
+
+During the November 14–15 hackathon, Navigators and subject-matter experts will be available to help answer questions about challenges, datasets, and technical resources.
+
+Additional challenge-related data and resources are expected to become available on Friday, November 13, at 12:00 PM ET.
+2. Upcoming Pre-Hackathon Events
+
+Participant Information Session & Q&A
+
+    Tuesday, November 3 | 7:00–8:00 PM ET
+
+    Virtual session covering hackathon basics, challenges, team formation, project submissions, and helpful resources.
+
+    Optional time for introductions and connecting with potential teammates.
+
+If you can't attend, no worries! I'll share the presentation materials afterward.
+
+Pre-Hackathon Webinar — Space Science, Technology & Innovation
+
+    Thursday, November 5 | 1:00–2:00 PM ET 
+
+    We're planning a webinar featuring researchers and subject-matter experts from organizations such as NASA Goddard Space Flight Center, Penn Medicine, and Johns Hopkins Applied Physics Laboratory.
+    The speakers will share insights into space science, astronaut health, AI, and emerging technologies to help inspire your hackathon ideas.
+    I highly encourage you to attend if your schedule allows. We'll share the confirmed agenda and meeting details separately.
+
+3. Project Submission Guidelines & Tips
+
+Please review the attached Project Submission Guidelines & Tips for information on preparing and submitting your project.
+
+A few important reminders:
+
+    Each team should designate a Team Owner responsible for submitting the project.
+
+    Submissions should include a project summary, a demonstration (a seven-slide presentation or a 30-second video), a publicly accessible project link, and relevant data and resource references.
+
+    Be sure to disclose any SI/AI tools used in developing your project.
+
+    Don't wait until the last minute to submit! Allow extra time for uploading materials and resolving technical issues.
+
+    Even if your project isn't fully completed, you're encouraged to submit what you've accomplished.
+
+4. Local Judging, Awards & Global Nominations
+
+Local judging: November 16–20, 2026
+Planned announcement of local awards and Global Nominees: November 21–22, 2026
+
+Following the hackathon, local judges will evaluate submitted projects and select outstanding teams for local recognition and nomination to the Global Judging round.
+
+The number of Global Nominee slots allocated to Philadelphia depends on the total number of projects submitted at our Local Event:
+Projects Submitted	Global Nominee Slots
+1–10	1
+11–20	2
+21–30	3
+31–40	4
+41–50	5
+51–60	6
+61–70	7
+71–80	8
+81–90	9
+91 or more	10
+
+Global Nominees advance to the next stage of judging for consideration for the NASA Space Apps Challenge Global Awards. Local awards are separate from Global Nominee selections.
+Stay Connected!
+
+You can use our Philadelphia Slack community to connect with other participants, find teammates, share resources, and ask questions.
+
+Philadelphia Local Event: https://www.spaceappschallenge.org/2026/local-events/philadelphia/
+
+We're looking forward to seeing what you create. Have fun exploring, collaborating, and bringing your ideas to life!
+
+Best,
+Grace
+Volunteer Local Lead
+NASA Space Apps Challenge Philadelphia 2026

@@ -1,0 +1,5 @@
+# Downloaded planetary raster payloads
+/data/**/*.img
+/data/**/*.IMG
+/data/**/*.jp2
+/data/**/*.JP2
