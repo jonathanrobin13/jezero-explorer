@@ -20,3 +20,5 @@ Jezero Explorer is a NASA Space Apps Challenge project. Build an interactive map
 - Use this project to practice and demonstrate planetary data analysis, scientific computing, systems thinking, verification, and clear technical communication.
 - Explain the reasoning behind consequential decisions so the project owner can discuss and defend them independently. Connect the math and code to the Marswalk scenario.
 - Capture key decisions, validation results, and known limitations as the project develops. For portfolio materials, credit data and tools accurately and describe the project owner's specific contributions, including what they implemented, tested, and learned.
+
+** DO NOT CODE DIRECTLY, ONLY GIVE ME CODE TO COPY AND PASTE
