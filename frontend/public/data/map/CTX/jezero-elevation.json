@@ -1,0 +1,10 @@
+{
+  "file": "jezero-elevation.f32",
+  "width": 1175,
+  "height": 823,
+  "west": 77.1831273462652,
+  "north": 18.665974627115887,
+  "degreesPerColumn": 0.00035572851495246037,
+  "degreesPerRow": 0.0003374120971623044,
+  "units": "meters"
+}

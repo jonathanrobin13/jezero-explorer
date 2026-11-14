@@ -1,0 +1,23 @@
+{
+  "image": "jezero-ctx.webp",
+  "width": 1800,
+  "height": 1196,
+  "bounds": {
+    "west": 77.18324077578212,
+    "south": 18.388472412861056,
+    "east": 77.60088946964963,
+    "north": 18.665926380357618
+  },
+  "coordinates": "Mars planetocentric degrees, east-positive, north up",
+  "source": {
+    "mission": "Mars Reconnaissance Orbiter",
+    "instrument": "CTX",
+    "publisher": "USGS Astrogeology Science Center",
+    "productId": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "url": "https://doi.org/10.5066/P9GV1ND3",
+    "projectedMetersPerPixel": [
+      6.0,
+      6.0
+    ]
+  }
+}
