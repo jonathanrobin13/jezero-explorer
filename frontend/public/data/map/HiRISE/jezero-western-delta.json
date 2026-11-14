@@ -1,0 +1,25 @@
+{
+  "image": "jezero-western-delta.webp",
+  "width": 6934,
+  "height": 11538,
+  "bounds": {
+    "west": 77.34394233172102,
+    "south": 18.3921313012049,
+    "east": 77.46626677339452,
+    "north": 18.588740447571734
+  },
+  "coordinates": "Mars planetocentric degrees, east-positive, north up",
+  "displayMetersPerPixel": {
+    "x": 1.0096476466229,
+    "y": 1.0096476466229
+  },
+  "source": {
+    "mission": "Mars Reconnaissance Orbiter",
+    "instrument": "HiRISE",
+    "publisher": "University of Arizona HiRISE team",
+    "credit": "NASA/JPL-Caltech/UArizona",
+    "productId": "PSP_002387_1985_RED_C_01_ORTHO",
+    "url": "https://www.uahirise.org/dtm/dtm.php?ID=PSP_002387_1985",
+    "projectedMetersPerPixel": 1.0096476466229
+  }
+}

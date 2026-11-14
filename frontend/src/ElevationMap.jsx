@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { RouteControls, RouteOverlay, useRoutePlanner } from './RoutePlanner.jsx'
 
 const ctxUrl = new URL(
   `${import.meta.env.BASE_URL}data/map/CTX/`,
@@ -108,12 +109,111 @@ function HeatLayer({ bounds }) {
     </>
   )
 }
+const HOME_VIEW = { zoom: 1, x: 0, y: 0 }
+
+function constrainView(zoom, x, y) {
+  return {
+    zoom,
+    x: Math.max(1 - zoom, Math.min(0, x)),
+    y: Math.max(1 - zoom, Math.min(0, y)),
+  }
+}
+
+function zoomAt(view, factor, anchorX = 0.5, anchorY = 0.5) {
+  const zoom = Math.max(1, Math.min(4, view.zoom * factor))
+  const ratio = zoom / view.zoom
+
+  return constrainView(
+    zoom,
+    anchorX - (anchorX - view.x) * ratio,
+    anchorY - (anchorY - view.y) * ratio,
+  )
+}
 
 export default function ElevationMap() {
   const [map, setMap] = useState(null)
   const [error, setError] = useState(null)
   const [showElevation, setShowElevation] = useState(false)
+	const [view, setView] = useState(HOME_VIEW)
+	const [detail, setDetail] = useState(null)
+	const viewportRef = useRef(null)
+	const dragRef = useRef(null)
+const planner = useRoutePlanner()
 
+function startDrag(event) {
+  if (!event.isPrimary || event.button !== 0 || view.zoom <= 1) return
+
+  event.currentTarget.setPointerCapture(event.pointerId)
+  dragRef.current = {
+    pointerId: event.pointerId,
+    x: event.clientX,
+    y: event.clientY,
+  }
+}
+
+function moveDrag(event) {
+  const drag = dragRef.current
+  if (drag?.pointerId !== event.pointerId) return
+
+  const rect = event.currentTarget.getBoundingClientRect()
+  const dx = (event.clientX - drag.x) / rect.width
+  const dy = (event.clientY - drag.y) / rect.height
+
+  drag.x = event.clientX
+  drag.y = event.clientY
+
+  setView((current) =>
+    constrainView(current.zoom, current.x + dx, current.y + dy),
+  )
+}
+
+function endDrag(event) {
+  if (dragRef.current?.pointerId === event.pointerId) {
+    dragRef.current = null
+  }
+}
+
+
+useEffect(() => {
+  const controller = new AbortController()
+  const url = new URL('../HiRISE/jezero-western-delta.json', ctxUrl)
+
+  fetchFile(url, controller.signal)
+    .then((response) => response.json())
+    .then((metadata) => {
+      if (!controller.signal.aborted) {
+        setDetail({ ...metadata, src: new URL(metadata.image, url).href })
+      }
+    })
+    .catch((error) => {
+      if (!controller.signal.aborted) console.warn('HiRISE detail unavailable', error)
+    })
+
+  return () => controller.abort()
+}, [])
+
+useEffect(() => {
+  const viewport = viewportRef.current
+  if (!viewport) return
+
+  function onWheel(event) {
+    if (event.deltaY === 0) return
+    event.preventDefault()
+
+    const rect = viewport.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width
+    const y = (event.clientY - rect.top) / rect.height
+    const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? rect.height : 1
+    const delta = Math.max(-120, Math.min(120, event.deltaY * unit))
+
+    setView((current) => zoomAt(current, Math.exp(-delta * 0.002), x, y))
+  }
+
+  viewport.addEventListener('wheel', onWheel, { passive: false })
+  return () => viewport.removeEventListener('wheel', onWheel)
+}, [map])
+
+	
   useEffect(() => {
     const controller = new AbortController()
     const { signal } = controller
@@ -144,16 +244,74 @@ export default function ElevationMap() {
         Show elevation
       </label>
 
-      <div className="relative overflow-hidden rounded-lg">
-        <img
-          src={new URL(map.image, ctxUrl).href}
-          alt="CTX orbital image of western Jezero Crater"
-          width={map.width}
-          height={map.height}
-          className="block h-auto w-full"
-        />
-        {showElevation && <HeatLayer bounds={map.bounds} />}
-      </div>
+		<div className="mb-3 flex gap-2" role="group" aria-label="Map zoom">
+		  <button
+			type="button"
+			className="rounded bg-slate-700 px-3 py-1"
+			aria-label="Zoom out"
+			onClick={() => setView((current) => zoomAt(current, 1 / 1.5))}
+		  >
+			−
+		  </button>
+		  <button
+			type="button"
+			className="rounded bg-slate-700 px-3 py-1"
+			aria-label="Zoom in"
+			onClick={() => setView((current) => zoomAt(current, 1.5))}
+		  >
+			+
+		  </button>
+		  <button
+			type="button"
+			className="rounded bg-slate-700 px-3 py-1"
+			onClick={() => setView(HOME_VIEW)}
+		  >
+			Reset
+		  </button>
+		</div>
+
+		<div
+  ref={viewportRef}
+  className={`relative select-none overflow-hidden rounded-lg ${
+    view.zoom > 1 ? 'touch-none cursor-grab active:cursor-grabbing' : ''
+  }`}
+  style={{ aspectRatio: `${map.width} / ${map.height}` }}
+  onPointerDown={startDrag}
+  onPointerMove={moveDrag}
+  onPointerUp={endDrag}
+  onPointerCancel={endDrag}
+  onLostPointerCapture={endDrag}
+  onDragStart={(event) => event.preventDefault()}
+>
+		  <div
+			className="absolute inset-0 origin-top-left"
+			style={{
+			  transform: `translate(${view.x * 100}%, ${view.y * 100}%) scale(${view.zoom})`,
+			}}
+		  >
+			<img
+			  src={new URL(map.image, ctxUrl).href}
+			  alt="CTX orbital image of western Jezero Crater"
+			  className="block h-full w-full"
+			/>
+
+			{detail && view.zoom >= 2 && (
+			  <img
+				src={detail.src}
+				alt="HiRISE close-up of Jezero’s western delta"
+				className="pointer-events-none absolute"
+				style={{
+				  left: `${100 * (detail.bounds.west - map.bounds.west) / (map.bounds.east - map.bounds.west)}%`,
+				  top: `${100 * (map.bounds.north - detail.bounds.north) / (map.bounds.north - map.bounds.south)}%`,
+				  width: `${100 * (detail.bounds.east - detail.bounds.west) / (map.bounds.east - map.bounds.west)}%`,
+				  height: `${100 * (detail.bounds.north - detail.bounds.south) / (map.bounds.north - map.bounds.south)}%`,
+				}}
+			  />
+			)}
+
+			{showElevation && <HeatLayer bounds={map.bounds} />}
+		  </div>
+		</div>
     </section>
   )
 }
