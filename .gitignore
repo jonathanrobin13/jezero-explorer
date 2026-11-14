@@ -1,5 +1,6 @@
 # Downloaded planetary raster payloads
-/data/**/*.img
-/data/**/*.IMG
-/data/**/*.jp2
-/data/**/*.JP2
+/data/map
+
+# Pycache
+__pycache__/
+*.py[cod]
