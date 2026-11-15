@@ -1,5 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { RouteControls, RouteOverlay, useRoutePlanner } from './RoutePlanner.jsx'
+
+const TerrainView = lazy(() => import('./TerrainView.jsx'))
+const MissionView = lazy(() => import('./MissionView.jsx'))
+
+const mapViews = [
+  ['map', '2D map'],
+  ['terrain', '3D terrain'],
+  ['mission', 'Astronaut mission'],
+]
 
 const ctxUrl = new URL(
   `${import.meta.env.BASE_URL}data/map/CTX/`,
@@ -133,6 +142,7 @@ function zoomAt(view, factor, anchorX = 0.5, anchorY = 0.5) {
 export default function ElevationMap() {
   const [map, setMap] = useState(null)
   const [error, setError] = useState(null)
+  const [mapView, setMapView] = useState('map')
   const [showElevation, setShowElevation] = useState(false)
 	const [view, setView] = useState(HOME_VIEW)
 	const [detail, setDetail] = useState(null)
@@ -211,7 +221,7 @@ useEffect(() => {
 
   viewport.addEventListener('wheel', onWheel, { passive: false })
   return () => viewport.removeEventListener('wheel', onWheel)
-}, [map])
+}, [map, mapView])
 
 	
   useEffect(() => {
@@ -235,6 +245,41 @@ useEffect(() => {
 
   return (
     <section className="mx-auto max-w-6xl">
+      <div className="mb-4 flex flex-wrap gap-2" role="group" aria-label="Map view">
+        {mapViews.map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            aria-pressed={mapView === value}
+            onClick={() => setMapView(value)}
+            className="rounded-lg border border-slate-600 px-4 py-2 font-medium aria-pressed:border-cyan-300 aria-pressed:bg-cyan-200 aria-pressed:text-slate-950"
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {mapView === 'mission' ? (
+        <Suspense fallback={<p role="status">Loading astronaut mission…</p>}>
+          <MissionView
+            terrain={planner.terrain}
+            loadError={planner.loadError}
+            bounds={map.bounds}
+            image={new URL(map.image, ctxUrl).href}
+          />
+        </Suspense>
+      ) : mapView === 'terrain' ? (
+        <Suspense fallback={<p role="status">Loading 3D terrain…</p>}>
+          <TerrainView
+            terrain={planner.terrain}
+            loadError={planner.loadError}
+            bounds={map.bounds}
+            image={new URL(map.image, ctxUrl).href}
+            imagerySource={map.source.url}
+          />
+        </Suspense>
+      ) : (
+      <>
       <label className="mb-3 flex items-center gap-2">
         <input
           type="checkbox"
@@ -312,6 +357,11 @@ useEffect(() => {
 			{showElevation && <HeatLayer bounds={map.bounds} />}
 		  </div>
 		</div>
+        <p className="mt-2 text-sm text-slate-300">
+          Jezero Crater · Mars Reconnaissance Orbiter CTX mosaic · USGS Astrogeology
+        </p>
+      </>
+      )}
     </section>
   )
 }
