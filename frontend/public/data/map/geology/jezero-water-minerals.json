@@ -1,0 +1,284 @@
+{
+  "coordinates": "Mars planetocentric degrees, east-positive longitude",
+  "coordinateNote": "Markers are representative locations within published regional units or detections. They are not pixel-accurate mineral boundaries.",
+  "sources": [
+    {
+      "id": "crism-jezero",
+      "mission": "Mars Reconnaissance Orbiter",
+      "instrument": "Compact Reconnaissance Imaging Spectrometer for Mars (CRISM)",
+      "publisher": "NASA / CRISM team; research published in Geophysical Research Letters",
+      "productIds": ["FRT000047A3", "HRL000040FF"],
+      "resolution": "FRT000047A3 is full-resolution (~18 m/pixel at 300 km); HRL000040FF is half-resolution long (~36 m/pixel at 300 km). Ground sampling varies with orbital geometry.",
+      "coverage": "Western and northern Jezero delta areas within the western CTX map",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019gl085584"
+    },
+    {
+      "id": "jezero-geologic-units",
+      "mission": "Mars Reconnaissance Orbiter",
+      "instrument": "CRISM and Context Camera (CTX)",
+      "publisher": "NASA Mars 2020 Candidate Landing Site Science Team",
+      "productIds": ["Jezero candidate landing site data sheet"],
+      "resolution": "Regional geologic unit interpretation; marker coordinates are approximate area centers",
+      "coverage": "Western delta, crater basin fill, and lake-margin units in Jezero Crater",
+      "url": "https://marsnext.jpl.nasa.gov/documents/LandingSiteWorksheet_Jezero_final.pdf"
+    },
+    {
+      "id": "perseverance-margin-unit",
+      "mission": "Mars 2020 Perseverance",
+      "instrument": "SuperCam (LIBS, VISIR, Raman) and rover science instruments",
+      "publisher": "NASA PDS / Mars 2020 team; analysis published by AGU",
+      "productIds": ["SuperCam data through sol 1282; Mars 2020 PDS calibrated products"],
+      "resolution": "In-situ target measurements at rock and outcrop scales; locations are campaign representatives, not the instrument footprints",
+      "coverage": "Séítah, Western Fan / Upper Fan, and Margin Unit along about 31 km of the rover traverse",
+      "url": "https://doi.org/10.1029/2025JE009107"
+    },
+    {
+      "id": "perseverance-waypoints",
+      "mission": "Mars 2020 Perseverance",
+      "instrument": "Rover localization / traverse products",
+      "publisher": "NASA/JPL Mars Trek",
+      "productIds": ["M20_waypoints_sol2022_all"],
+      "resolution": "Discrete rover drive and site waypoints with latitude/longitude; spacing varies by drive and is not an imaging resolution",
+      "coverage": "Perseverance traverse through sol 2022; this layer uses waypoints associated with published geology campaigns",
+      "url": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json"
+    },
+    {
+      "id": "regional-landmarks",
+      "mission": "Mars Reconnaissance Orbiter",
+      "instrument": "Context Camera (CTX)",
+      "publisher": "USGS Astrogeology Science Center; geomorphic names from NASA Mars 2020 science mapping",
+      "productIds": ["JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0"],
+      "resolution": "6 m/pixel orbital image mosaic; place-name positions are approximate label anchors",
+      "coverage": "Western Jezero crater map extent, including delta and inlet/outlet valleys",
+      "url": "https://doi.org/10.1126/sciadv.abo4856"
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "jezero-crater-label",
+      "name": "Jezero Crater",
+      "type": "Crater basin",
+      "latitude": 18.535,
+      "longitude": 77.50,
+      "sourceId": "regional-landmarks"
+    },
+    {
+      "id": "western-delta-label",
+      "name": "Western Delta",
+      "type": "Ancient river delta",
+      "latitude": 18.485,
+      "longitude": 77.415,
+      "sourceId": "regional-landmarks"
+    },
+    {
+      "id": "northern-delta-label",
+      "name": "Northern Delta",
+      "type": "Ancient river delta",
+      "latitude": 18.585,
+      "longitude": 77.565,
+      "sourceId": "regional-landmarks"
+    },
+    {
+      "id": "neretva-vallis-label",
+      "name": "Neretva Vallis",
+      "type": "Western inlet valley",
+      "latitude": 18.495,
+      "longitude": 77.315,
+      "sourceId": "regional-landmarks"
+    },
+    {
+      "id": "sava-vallis-label",
+      "name": "Sava Vallis",
+      "type": "Northern inlet valley",
+      "latitude": 18.625,
+      "longitude": 77.48,
+      "sourceId": "regional-landmarks"
+    },
+    {
+      "id": "pliva-vallis-label",
+      "name": "Pliva Vallis",
+      "type": "Eastern outlet valley",
+      "latitude": 18.475,
+      "longitude": 77.595,
+      "sourceId": "regional-landmarks"
+    }
+  ],
+  "features": [
+    {
+      "id": "western-delta-clays",
+      "kind": "mineral",
+      "latitude": 18.473,
+      "longitude": 77.415,
+      "title": "Western delta · water-altered clays",
+      "minerals": ["Fe/Mg smectite clays", "Carbonates"],
+      "evidence": "Orbital spectra identify clay and carbonate minerals in layered delta sediments. These minerals are consistent with water–rock alteration and sediment deposition in an ancient lake system.",
+      "sourceIds": ["crism-jezero", "jezero-geologic-units"],
+      "interpretation": "Orbital spectral detection and regional geologic interpretation",
+      "keyPoint": "Layered delta sediment contains Fe/Mg smectite and carbonate signatures.",
+      "whyItMatters": "Clay-rich sediments can preserve chemical traces of water and potential biosignatures."
+    },
+    {
+      "id": "western-delta-hydrated-silica",
+      "kind": "mineral",
+      "latitude": 18.493,
+      "longitude": 77.397,
+      "title": "Western delta · hydrated silica detection",
+      "minerals": ["Hydrated silica"],
+      "evidence": "A CRISM spectral detection near the western delta has absorption features consistent with hydrated silica. The published detection is regional and the marker indicates its approximate area.",
+      "sourceIds": ["crism-jezero"],
+      "interpretation": "CRISM detection verified from extracted spectra",
+      "keyPoint": "Hydrated silica was detected in a western-delta outcrop.",
+      "whyItMatters": "Silica can preserve fine-scale biosignature evidence; the detection helps prioritize a science stop."
+    },
+    {
+      "id": "lake-margin-carbonates",
+      "kind": "water",
+      "latitude": 18.455,
+      "longitude": 77.466,
+      "title": "Paleolake margin · carbonate-bearing unit",
+      "minerals": ["Carbonates"],
+      "evidence": "A carbonate-bearing unit follows part of Jezero’s inner margin near the western delta and a major inlet. Researchers propose that some of these carbonates may have precipitated in a near-shore paleolake environment.",
+      "sourceIds": ["jezero-geologic-units"],
+      "interpretation": "Published interpretation; lacustrine origin is a hypothesis",
+      "keyPoint": "Carbonate-bearing rock traces part of the crater's inner margin.",
+      "whyItMatters": "If it formed at the lake shore, this unit could preserve environmental clues from the paleolake."
+    },
+    {
+      "id": "margin-unit-alteration",
+      "kind": "mineral",
+      "latitude": 18.48342,
+      "longitude": 77.35055,
+      "title": "Margin Unit · eastern campaign area",
+      "minerals": ["Fe/Mg carbonate", "Silica"],
+      "evidence": "Perseverance measurements in the eastern Margin Unit report carbonate-rich rocks, silica, and localized veins with calcium sulfate and fluorite. The NASA waypoint at sol 925 is used as an approximate campaign location; the minerals are not all present at that single point.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover measurement campaign, with representative waypoint at sol 925",
+      "sol": 925,
+      "keyPoint": "Eastern Margin Unit carbonate estimates reach about 6–16 wt% in the studied rocks.",
+      "whyItMatters": "The chemistry suggests repeated groundwater and possibly lake-related alteration; localized veins also point to later fluid flow."
+    },
+    {
+      "id": "delta-paleolake-evidence",
+      "kind": "water",
+      "latitude": 18.506,
+      "longitude": 77.421,
+      "title": "Western delta · ancient water evidence",
+      "minerals": [],
+      "evidence": "A fan-shaped deposit with layered sediments records river transport into a former lake. This is geological evidence of ancient surface water, not a present-day water spot.",
+      "sourceIds": ["jezero-geologic-units"],
+      "interpretation": "Fluvio-deltaic landform and sedimentary interpretation",
+      "keyPoint": "Layered fan deposits mark a river entering an ancient lake.",
+      "whyItMatters": "The layers record how water and sediment moved, helping select safe, scientifically useful Marswalk destinations."
+    },
+    {
+      "id": "northern-delta-hydrated-silica",
+      "kind": "mineral",
+      "latitude": 18.575,
+      "longitude": 77.565,
+      "title": "Northern delta · hydrated silica detection",
+      "minerals": ["Hydrated silica"],
+      "evidence": "CRISM analysis verified a second hydrated-silica detection near the northern Jezero delta. The coordinate is an approximate map location for the published detection area.",
+      "sourceIds": ["crism-jezero"],
+      "interpretation": "CRISM spectral detection verified from extracted spectra; approximate location",
+      "keyPoint": "A second silica-rich detection occurs by the northern delta.",
+      "whyItMatters": "Seeing silica in two delta settings suggests more than one place may preserve clues to ancient water and habitability."
+    },
+    {
+      "id": "al-phyllosilicate-detection",
+      "kind": "mineral",
+      "latitude": 18.525,
+      "longitude": 77.49,
+      "title": "Crater floor · Al-phyllosilicate detection",
+      "minerals": ["Al-phyllosilicate clay"],
+      "evidence": "CRISM spectral analysis reported an Al-phyllosilicate detection in Jezero. Its plotted location is approximate because the paper identifies the detection in a regional figure rather than providing a ground-station coordinate.",
+      "sourceIds": ["crism-jezero"],
+      "interpretation": "CRISM detection verified from extracted spectrum; approximate map location",
+      "keyPoint": "A distinct aluminum-rich clay signature occurs in Jezero.",
+      "whyItMatters": "Different clay chemistry can record different water conditions and alteration histories."
+    },
+    {
+      "id": "seitah-olivine-carbonate",
+      "kind": "mineral",
+      "latitude": 18.44462715,
+      "longitude": 77.45088572,
+      "title": "Séítah · weakly altered olivine-rich floor",
+      "minerals": ["Olivine", "Fe/Mg carbonate", "Talc/serpentine-group clay"],
+      "evidence": "Perseverance studied olivine-rich Séítah rocks near its landing area. The recent multi-instrument synthesis estimates roughly 1–3 wt% carbonate in this unit, lower than in the Upper Fan and Margin Unit.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover unit-scale synthesis; landing waypoint used as approximate unit location",
+      "sol": 0,
+      "keyPoint": "Séítah is olivine-rich and comparatively weakly altered, with about 1–3 wt% estimated carbonate.",
+      "whyItMatters": "It provides a baseline for comparing how much more strongly water altered later units."
+    },
+    {
+      "id": "fan-front-shenandoah",
+      "kind": "water",
+      "latitude": 18.45276569,
+      "longitude": 77.40807823,
+      "title": "Fan Front · Shenandoah formation",
+      "minerals": ["Sulfates", "Clays"],
+      "evidence": "Perseverance's Fan Front campaign investigated the lower western fan. Published mapping describes the Shenandoah formation as fine- to medium-grained sedimentary layers, with sulfate and clay minerals dominating the analyzed primary mineralogy. Location is represented by a nearby sol 663 waypoint.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover campaign geology with a representative sol 663 waypoint",
+      "sol": 663,
+      "keyPoint": "Fine sediments and sulfate/clay signatures occur in the lower fan.",
+      "whyItMatters": "These deposits help reconstruct flowing water and lake conditions at the delta front."
+    },
+    {
+      "id": "upper-fan-tenby",
+      "kind": "mineral",
+      "latitude": 18.47036808,
+      "longitude": 77.38429159,
+      "title": "Upper Fan · Tenby outcrop",
+      "minerals": ["Olivine", "Carbonate", "Silica"],
+      "evidence": "SuperCam and other Perseverance instruments detected carbonate-bearing rocks in Upper Fan outcrops including Tenby. The wider Upper Fan unit has estimated carbonate contents around 3–9 wt%; the map point is a nearby sol 732 waypoint, not a target pixel.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover campaign synthesis with representative sol 732 waypoint",
+      "sol": 732,
+      "keyPoint": "Upper Fan rocks contain more carbonate than Séítah and preserve tilted delta beds.",
+      "whyItMatters": "The bed geometry and carbonate chemistry connect water-laid sediments with water–rock alteration."
+    },
+    {
+      "id": "upper-fan-otis-peak",
+      "kind": "water",
+      "latitude": 18.48272659,
+      "longitude": 77.36863151,
+      "title": "Upper Fan · Otis Peak formation",
+      "minerals": ["Olivine", "Carbonate"],
+      "evidence": "The Otis Peak formation contains coarse sandstone and conglomerate interpreted as fluvial topsets in the delta sequence. A nearby sol 784 rover waypoint marks this approximate visited area.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover-observed sedimentary unit with representative sol 784 waypoint",
+      "sol": 784,
+      "keyPoint": "Rounded pebbles and coarse beds record energetic water transport.",
+      "whyItMatters": "Clast size and rounding help estimate ancient flow strength and distinguish river deposits from quiet lake sediments."
+    },
+    {
+      "id": "margin-unit-west",
+      "kind": "mineral",
+      "latitude": 18.49197961,
+      "longitude": 77.32624591,
+      "title": "Margin Unit · western-most area",
+      "minerals": ["Fe/Mg phyllosilicate clay", "Olivine"],
+      "evidence": "In the studied western-most, highest part of the Margin Unit, Perseverance observations show weaker alteration dominated by Fe/Mg phyllosilicate rather than carbonate. The coordinate is a nearby sol 1100 waypoint.",
+      "sourceIds": ["perseverance-margin-unit", "perseverance-waypoints"],
+      "interpretation": "Rover campaign synthesis with representative sol 1100 waypoint",
+      "sol": 1100,
+      "keyPoint": "The western-most Margin Unit is clay-dominated and has less carbonate evidence.",
+      "whyItMatters": "The east-to-west mineral change shows alteration varied across the unit instead of affecting every rock equally."
+    },
+    {
+      "id": "neretva-vallis",
+      "kind": "water",
+      "latitude": 18.49754519,
+      "longitude": 77.30542492,
+      "title": "Neretva Vallis · ancient channel corridor",
+      "minerals": [],
+      "evidence": "Perseverance traversed Neretva Vallis, a channel that once carried water into Jezero. The marker uses a NASA sol 1206 waypoint in the rover's channel-crossing campaign.",
+      "sourceIds": ["jezero-geologic-units", "perseverance-waypoints"],
+      "interpretation": "Mapped ancient channel and rover traverse waypoint",
+      "sol": 1206,
+      "keyPoint": "This valley was an inlet route for water and sediment into Jezero.",
+      "whyItMatters": "Channel deposits link the crater lake to its watershed and offer another place to compare transported minerals."
+    }
+  ]
+}

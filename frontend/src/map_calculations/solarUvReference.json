@@ -1,0 +1,15 @@
+{
+  "mission": "Total and Spectral Solar Irradiance Sensor-1 (TSIS-1)",
+  "instrument": "Spectral Irradiance Monitor and hybrid reference spectra",
+  "publisher": "LASP Interactive Solar Irradiance Data Center",
+  "product": "tsis1_hsrs_p1nm",
+  "source": "https://lasp.colorado.edu/lisird/latis/dap/tsis1_hsrs_p1nm.csv",
+  "wavelengthRangeNm": [
+    250,
+    400
+  ],
+  "wavelengthSampleSpacingNm": 0.025,
+  "spectralBandwidthNm": 0.1,
+  "referenceDistanceAu": 1,
+  "erythemalIrradianceWm2": 14.08166798
+}

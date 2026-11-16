@@ -4,12 +4,90 @@ from math import ceil, cos, floor, radians
 import numpy as np
 from PIL import Image
 
-from inspect_ctx import JEZERO_REGION_BOUNDS, ROOT
+from inspect_ctx import CTX_PATH, JEZERO_REGION_BOUNDS, ROOT, crop_ctx_image
 
 
 DEM_PATH = ROOT / "data" / "map" / "CTX" / "Jezero_Crater_CTX_DEM.tif"
 OUTPUT_DIR = ROOT / "frontend" / "public" / "data" / "map" / "CTX"
 
+def box_sum(values, radius=15):
+    padded = np.pad(values.astype(float), radius)
+    sums = np.pad(padded, ((1, 0), (1, 0))).cumsum(0).cumsum(1)
+    size = 2 * radius + 1
+    return (
+        sums[size:, size:] - sums[:-size, size:]
+        - sums[size:, :-size] + sums[:-size, :-size]
+    )
+
+
+def measure_darkness(metadata, dem):
+    height, width = dem.shape
+
+    with Image.open(CTX_PATH) as source:
+        nodata = int(source.tag_v2[42113])
+        crop, bounds = crop_ctx_image(source)
+        pixels = np.asarray(crop)
+
+    lon_step = (bounds["east"] - bounds["west"]) / crop.width
+    lat_step = (bounds["north"] - bounds["south"]) / crop.height
+    lon = bounds["west"] + (np.arange(crop.width) + 0.5) * lon_step
+    lat = bounds["north"] - (np.arange(crop.height) + 0.5) * lat_step
+
+    cols = np.floor(
+        (lon - metadata["west"]) / metadata["degreesPerColumn"]
+    ).astype(int)
+    rows = np.floor(
+        (metadata["north"] - lat) / metadata["degreesPerRow"]
+    ).astype(int)
+
+    valid = (
+        (rows[:, None] >= 0) & (rows[:, None] < height)
+        & (cols[None, :] >= 0) & (cols[None, :] < width)
+        & (pixels != nodata)
+    )
+    cells = (rows[:, None] * width + cols[None, :])[valid]
+    counts = np.bincount(cells, minlength=dem.size).reshape(dem.shape)
+    totals = np.bincount(
+        cells, weights=pixels[valid], minlength=dem.size
+    ).reshape(dem.shape)
+
+    available = (counts >= 8) & np.isfinite(dem)
+    mean = np.divide(totals, counts, out=np.zeros_like(totals), where=available)
+    support = box_sum(available)
+    background = np.divide(
+        box_sum(mean), support, out=np.zeros_like(mean), where=support > 0
+    )
+    contrast = np.divide(
+        background - mean, background,
+        out=np.zeros_like(mean), where=background > 0,
+    )
+
+    darkness = measure_darkness(metadata, grid)
+    metadata["darkness"] = {
+        "file": "jezero-darkness.u8",
+        "unknown": 255,
+        "maxScore": 254,
+        "localWindowCells": 31,
+        "thresholdFraction": 0.15,
+        "saturationFraction": 0.35,
+        "sourceMetadata": "jezero-ctx.json",
+    }
+    (OUTPUT_DIR / metadata["darkness"]["file"]).write_bytes(
+        darkness.tobytes(order="C")
+    )
+    print(f"Darkness coverage: {(darkness != 255).mean():.2%}")
+    
+    known = (
+        available
+        & (support >= 0.8 * box_sum(np.ones_like(mean)))
+        & (background > 0)
+    )
+
+    scores = np.full(dem.shape, 255, dtype=np.uint8)
+    scores[known] = np.rint(
+        254 * np.clip((contrast[known] - 0.15) / 0.20, 0, 1)
+    ).astype(np.uint8)
+    return scores
 
 def main() -> None:
     west, south, east, north = JEZERO_REGION_BOUNDS

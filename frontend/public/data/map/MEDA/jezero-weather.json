@@ -1,0 +1,858 @@
+{
+  "source": {
+    "mission": "Mars 2020 Perseverance",
+    "instrument": "MEDA Air Temperature Sensor 1 and Pressure Sensor",
+    "publisher": "NASA Planetary Data System, Planetary Atmospheres Node",
+    "url": "https://doi.org/10.17189/1522849",
+    "coverageUtc": [
+      "2022-11-11",
+      "2022-11-18"
+    ],
+    "resolution": "Rover point readings paired within one spacecraft-clock second of the UV snapshot",
+    "products": [
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0614___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0614/WE__0614___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0614/WE__0614___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0614___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0614/WE__0614___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0614/WE__0614___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0615___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0615/WE__0615___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0615/WE__0615___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0615___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0615/WE__0615___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0615/WE__0615___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0616___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0616/WE__0616___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0616/WE__0616___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0616___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0616/WE__0616___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0616/WE__0616___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0617___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0617/WE__0617___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0617/WE__0617___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0617___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0617/WE__0617___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0617/WE__0617___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0618___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0618/WE__0618___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0618/WE__0618___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0618___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0618/WE__0618___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0618/WE__0618___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0619___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0619/WE__0619___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0619/WE__0619___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0619___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0619/WE__0619___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0619/WE__0619___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0620___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0620/WE__0620___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0620/WE__0620___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0620___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0620/WE__0620___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0620/WE__0620___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0621___________cal_ats_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0621/WE__0621___________CAL_ATS_________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0621/WE__0621___________CAL_ATS_________________P01.xml",
+        "column": "ATS_LOCAL_TEMP1"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0621___________der_ps__________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0621/WE__0621___________DER_PS__________________P01.CSV",
+        "labelUrl": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0621/WE__0621___________DER_PS__________________P01.xml",
+        "column": "PRESSURE"
+      }
+    ]
+  },
+  "snapshots": {
+    "2022-11-11T08:47:58Z": {
+      "temperatureC": -78.6,
+      "pressurePa": null
+    },
+    "2022-11-11T09:49:37Z": {
+      "temperatureC": -77.8,
+      "pressurePa": 742
+    },
+    "2022-11-11T10:20:26Z": {
+      "temperatureC": -75.2,
+      "pressurePa": 738
+    },
+    "2022-11-11T10:51:16Z": {
+      "temperatureC": -69.0,
+      "pressurePa": null
+    },
+    "2022-11-11T11:52:54Z": {
+      "temperatureC": -57.2,
+      "pressurePa": 717
+    },
+    "2022-11-11T12:23:44Z": {
+      "temperatureC": -50.9,
+      "pressurePa": 717
+    },
+    "2022-11-11T12:54:33Z": {
+      "temperatureC": -41.1,
+      "pressurePa": null
+    },
+    "2022-11-11T13:56:12Z": {
+      "temperatureC": -30.4,
+      "pressurePa": 714
+    },
+    "2022-11-11T14:27:01Z": {
+      "temperatureC": -29.6,
+      "pressurePa": 712
+    },
+    "2022-11-11T14:57:51Z": {
+      "temperatureC": -23.2,
+      "pressurePa": null
+    },
+    "2022-11-11T15:59:29Z": {
+      "temperatureC": -17.8,
+      "pressurePa": 708
+    },
+    "2022-11-11T16:30:19Z": {
+      "temperatureC": -18.8,
+      "pressurePa": 706
+    },
+    "2022-11-11T17:01:08Z": {
+      "temperatureC": -26.1,
+      "pressurePa": null
+    },
+    "2022-11-11T18:02:47Z": {
+      "temperatureC": -12.3,
+      "pressurePa": 702
+    },
+    "2022-11-11T18:33:36Z": {
+      "temperatureC": -16.7,
+      "pressurePa": 699
+    },
+    "2022-11-11T19:04:25Z": {
+      "temperatureC": -22.9,
+      "pressurePa": null
+    },
+    "2022-11-11T20:06:05Z": {
+      "temperatureC": -38.9,
+      "pressurePa": 698
+    },
+    "2022-11-11T20:36:54Z": {
+      "temperatureC": -46.4,
+      "pressurePa": 699
+    },
+    "2022-11-12T09:27:28Z": {
+      "temperatureC": -78.4,
+      "pressurePa": 716
+    },
+    "2022-11-12T09:58:17Z": {
+      "temperatureC": -78.8,
+      "pressurePa": 726
+    },
+    "2022-11-12T10:29:07Z": {
+      "temperatureC": -76.0,
+      "pressurePa": null
+    },
+    "2022-11-12T11:30:45Z": {
+      "temperatureC": -65.8,
+      "pressurePa": 725
+    },
+    "2022-11-12T12:01:35Z": {
+      "temperatureC": -56.7,
+      "pressurePa": 717
+    },
+    "2022-11-12T12:32:24Z": {
+      "temperatureC": -49.9,
+      "pressurePa": null
+    },
+    "2022-11-12T13:34:03Z": {
+      "temperatureC": -39.2,
+      "pressurePa": 718
+    },
+    "2022-11-12T14:04:52Z": {
+      "temperatureC": -40.7,
+      "pressurePa": 717
+    },
+    "2022-11-12T14:35:41Z": {
+      "temperatureC": -31.8,
+      "pressurePa": null
+    },
+    "2022-11-12T15:37:20Z": {
+      "temperatureC": -34.8,
+      "pressurePa": 712
+    },
+    "2022-11-12T16:08:10Z": {
+      "temperatureC": -20.6,
+      "pressurePa": 712
+    },
+    "2022-11-12T16:38:59Z": {
+      "temperatureC": -18.3,
+      "pressurePa": null
+    },
+    "2022-11-12T17:40:38Z": {
+      "temperatureC": -17.4,
+      "pressurePa": 708
+    },
+    "2022-11-12T18:11:27Z": {
+      "temperatureC": -11.7,
+      "pressurePa": 708
+    },
+    "2022-11-12T18:42:16Z": {
+      "temperatureC": -11.8,
+      "pressurePa": null
+    },
+    "2022-11-12T19:43:55Z": {
+      "temperatureC": -25.4,
+      "pressurePa": 702
+    },
+    "2022-11-12T20:14:44Z": {
+      "temperatureC": -33.3,
+      "pressurePa": 702
+    },
+    "2022-11-12T20:45:34Z": {
+      "temperatureC": -41.4,
+      "pressurePa": null
+    },
+    "2022-11-13T10:06:57Z": {
+      "temperatureC": -81.1,
+      "pressurePa": null
+    },
+    "2022-11-13T11:08:36Z": {
+      "temperatureC": -77.5,
+      "pressurePa": 746
+    },
+    "2022-11-13T11:39:25Z": {
+      "temperatureC": -74.6,
+      "pressurePa": 747
+    },
+    "2022-11-13T12:10:15Z": {
+      "temperatureC": -67.4,
+      "pressurePa": 735
+    },
+    "2022-11-13T13:11:53Z": {
+      "temperatureC": -50.7,
+      "pressurePa": 724
+    },
+    "2022-11-13T13:42:43Z": {
+      "temperatureC": -44.1,
+      "pressurePa": 724
+    },
+    "2022-11-13T14:13:32Z": {
+      "temperatureC": -43.2,
+      "pressurePa": 726
+    },
+    "2022-11-13T15:15:11Z": {
+      "temperatureC": -40.2,
+      "pressurePa": 723
+    },
+    "2022-11-13T15:46:00Z": {
+      "temperatureC": -28.1,
+      "pressurePa": 720
+    },
+    "2022-11-13T16:16:49Z": {
+      "temperatureC": -29.4,
+      "pressurePa": 719
+    },
+    "2022-11-13T16:47:39Z": {
+      "temperatureC": -33.6,
+      "pressurePa": 718
+    },
+    "2022-11-13T17:18:28Z": {
+      "temperatureC": -31.2,
+      "pressurePa": 716
+    },
+    "2022-11-13T17:49:17Z": {
+      "temperatureC": -17.3,
+      "pressurePa": 714
+    },
+    "2022-11-13T18:20:07Z": {
+      "temperatureC": -16.7,
+      "pressurePa": 712
+    },
+    "2022-11-13T19:21:45Z": {
+      "temperatureC": -24.5,
+      "pressurePa": 709
+    },
+    "2022-11-13T19:52:35Z": {
+      "temperatureC": -17.6,
+      "pressurePa": 706
+    },
+    "2022-11-13T20:23:24Z": {
+      "temperatureC": -23.0,
+      "pressurePa": 704
+    },
+    "2022-11-13T21:25:03Z": {
+      "temperatureC": -38.8,
+      "pressurePa": 702
+    },
+    "2022-11-13T21:55:52Z": {
+      "temperatureC": -45.6,
+      "pressurePa": 703
+    },
+    "2022-11-14T10:46:25Z": {
+      "temperatureC": -80.3,
+      "pressurePa": 715
+    },
+    "2022-11-14T11:17:15Z": {
+      "temperatureC": -79.1,
+      "pressurePa": 724
+    },
+    "2022-11-14T11:48:04Z": {
+      "temperatureC": -77.8,
+      "pressurePa": 734
+    },
+    "2022-11-14T12:49:43Z": {
+      "temperatureC": -66.5,
+      "pressurePa": 724
+    },
+    "2022-11-14T13:20:32Z": {
+      "temperatureC": -57.4,
+      "pressurePa": 715
+    },
+    "2022-11-14T13:51:21Z": {
+      "temperatureC": -53.6,
+      "pressurePa": 711
+    },
+    "2022-11-14T14:53:00Z": {
+      "temperatureC": -37.6,
+      "pressurePa": 714
+    },
+    "2022-11-14T15:23:49Z": {
+      "temperatureC": -32.6,
+      "pressurePa": 713
+    },
+    "2022-11-14T15:54:39Z": {
+      "temperatureC": -29.2,
+      "pressurePa": 712
+    },
+    "2022-11-14T16:56:17Z": {
+      "temperatureC": -23.1,
+      "pressurePa": 709
+    },
+    "2022-11-14T17:27:07Z": {
+      "temperatureC": -20.4,
+      "pressurePa": 708
+    },
+    "2022-11-14T17:57:56Z": {
+      "temperatureC": -23.6,
+      "pressurePa": 706
+    },
+    "2022-11-14T18:59:36Z": {
+      "temperatureC": -25.5,
+      "pressurePa": 705
+    },
+    "2022-11-14T19:30:25Z": {
+      "temperatureC": -24.4,
+      "pressurePa": 705
+    },
+    "2022-11-14T20:01:14Z": {
+      "temperatureC": -10.6,
+      "pressurePa": 703
+    },
+    "2022-11-14T20:32:04Z": {
+      "temperatureC": -13.8,
+      "pressurePa": 701
+    },
+    "2022-11-14T21:02:53Z": {
+      "temperatureC": -21.2,
+      "pressurePa": 699
+    },
+    "2022-11-14T21:33:42Z": {
+      "temperatureC": -29.2,
+      "pressurePa": 699
+    },
+    "2022-11-14T22:04:32Z": {
+      "temperatureC": -37.4,
+      "pressurePa": 699
+    },
+    "2022-11-15T11:25:54Z": {
+      "temperatureC": -80.2,
+      "pressurePa": 721
+    },
+    "2022-11-15T12:27:33Z": {
+      "temperatureC": -76.5,
+      "pressurePa": 739
+    },
+    "2022-11-15T12:58:22Z": {
+      "temperatureC": -72.2,
+      "pressurePa": 746
+    },
+    "2022-11-15T13:29:11Z": {
+      "temperatureC": -68.9,
+      "pressurePa": 733
+    },
+    "2022-11-15T14:30:50Z": {
+      "temperatureC": -49.2,
+      "pressurePa": 720
+    },
+    "2022-11-15T15:01:39Z": {
+      "temperatureC": -49.0,
+      "pressurePa": 720
+    },
+    "2022-11-15T15:32:28Z": {
+      "temperatureC": -42.6,
+      "pressurePa": 723
+    },
+    "2022-11-15T16:34:07Z": {
+      "temperatureC": -40.7,
+      "pressurePa": 722
+    },
+    "2022-11-15T17:04:56Z": {
+      "temperatureC": -30.6,
+      "pressurePa": 718
+    },
+    "2022-11-15T17:35:46Z": {
+      "temperatureC": -25.8,
+      "pressurePa": 716
+    },
+    "2022-11-15T18:37:24Z": {
+      "temperatureC": -22.8,
+      "pressurePa": 714
+    },
+    "2022-11-15T19:08:14Z": {
+      "temperatureC": -17.9,
+      "pressurePa": 713
+    },
+    "2022-11-15T19:39:03Z": {
+      "temperatureC": -28.9,
+      "pressurePa": 712
+    },
+    "2022-11-15T20:09:52Z": {
+      "temperatureC": -13.7,
+      "pressurePa": 710
+    },
+    "2022-11-15T20:40:42Z": {
+      "temperatureC": -16.8,
+      "pressurePa": 709
+    },
+    "2022-11-15T21:11:31Z": {
+      "temperatureC": -29.1,
+      "pressurePa": 707
+    },
+    "2022-11-15T21:42:20Z": {
+      "temperatureC": -25.5,
+      "pressurePa": 706
+    },
+    "2022-11-15T22:43:59Z": {
+      "temperatureC": -36.2,
+      "pressurePa": 706
+    },
+    "2022-11-15T23:14:48Z": {
+      "temperatureC": -44.3,
+      "pressurePa": 706
+    },
+    "2022-11-16T12:05:22Z": {
+      "temperatureC": -82.4,
+      "pressurePa": 724
+    },
+    "2022-11-16T12:36:11Z": {
+      "temperatureC": -80.7,
+      "pressurePa": 730
+    },
+    "2022-11-16T13:07:01Z": {
+      "temperatureC": -77.8,
+      "pressurePa": 739
+    },
+    "2022-11-16T14:08:39Z": {
+      "temperatureC": -68.7,
+      "pressurePa": 732
+    },
+    "2022-11-16T14:39:29Z": {
+      "temperatureC": -60.2,
+      "pressurePa": 722
+    },
+    "2022-11-16T15:10:18Z": {
+      "temperatureC": -55.6,
+      "pressurePa": 717
+    },
+    "2022-11-16T16:11:57Z": {
+      "temperatureC": -40.9,
+      "pressurePa": 718
+    },
+    "2022-11-16T17:13:35Z": {
+      "temperatureC": -31.2,
+      "pressurePa": 717
+    },
+    "2022-11-16T18:15:14Z": {
+      "temperatureC": -27.4,
+      "pressurePa": 713
+    },
+    "2022-11-16T19:16:52Z": {
+      "temperatureC": -15.9,
+      "pressurePa": 711
+    },
+    "2022-11-16T20:18:31Z": {
+      "temperatureC": -21.2,
+      "pressurePa": 708
+    },
+    "2022-11-16T21:20:10Z": {
+      "temperatureC": -12.4,
+      "pressurePa": 705
+    },
+    "2022-11-16T22:21:48Z": {
+      "temperatureC": -20.9,
+      "pressurePa": 701
+    },
+    "2022-11-16T23:23:27Z": {
+      "temperatureC": -37.1,
+      "pressurePa": 700
+    },
+    "2022-11-17T12:44:49Z": {
+      "temperatureC": -80.7,
+      "pressurePa": 722
+    },
+    "2022-11-17T13:11:59Z": {
+      "temperatureC": -78.5,
+      "pressurePa": null
+    },
+    "2022-11-17T13:46:28Z": {
+      "temperatureC": -75.3,
+      "pressurePa": 742
+    },
+    "2022-11-17T14:48:06Z": {
+      "temperatureC": -65.6,
+      "pressurePa": 737
+    },
+    "2022-11-17T15:49:45Z": {
+      "temperatureC": -56.8,
+      "pressurePa": 721
+    },
+    "2022-11-17T16:51:24Z": {
+      "temperatureC": -38.4,
+      "pressurePa": 722
+    },
+    "2022-11-17T17:53:03Z": {
+      "temperatureC": -37.5,
+      "pressurePa": 726
+    },
+    "2022-11-17T18:23:52Z": {
+      "temperatureC": -27.8,
+      "pressurePa": 724
+    },
+    "2022-11-17T18:54:42Z": {
+      "temperatureC": -30.2,
+      "pressurePa": 723
+    },
+    "2022-11-17T19:56:20Z": {
+      "temperatureC": -34.9,
+      "pressurePa": 721
+    },
+    "2022-11-17T20:27:10Z": {
+      "temperatureC": -18.3,
+      "pressurePa": 719
+    },
+    "2022-11-17T20:57:59Z": {
+      "temperatureC": -15.4,
+      "pressurePa": 719
+    },
+    "2022-11-17T21:59:37Z": {
+      "temperatureC": -17.9,
+      "pressurePa": 717
+    },
+    "2022-11-17T22:30:27Z": {
+      "temperatureC": -23.8,
+      "pressurePa": 715
+    },
+    "2022-11-17T23:01:16Z": {
+      "temperatureC": -31.5,
+      "pressurePa": 713
+    },
+    "2022-11-18T00:02:55Z": {
+      "temperatureC": -38.3,
+      "pressurePa": 711
+    },
+    "2022-11-18T00:33:44Z": {
+      "temperatureC": -44.2,
+      "pressurePa": 712
+    },
+    "2022-11-18T13:24:16Z": {
+      "temperatureC": -83.6,
+      "pressurePa": 722
+    },
+    "2022-11-18T13:55:06Z": {
+      "temperatureC": -81.3,
+      "pressurePa": 732
+    },
+    "2022-11-18T14:25:55Z": {
+      "temperatureC": -77.4,
+      "pressurePa": 741
+    },
+    "2022-11-18T15:27:34Z": {
+      "temperatureC": -67.7,
+      "pressurePa": 735
+    },
+    "2022-11-18T15:58:23Z": {
+      "temperatureC": -56.6,
+      "pressurePa": 724
+    },
+    "2022-11-18T16:29:12Z": {
+      "temperatureC": -55.8,
+      "pressurePa": 719
+    },
+    "2022-11-18T17:30:51Z": {
+      "temperatureC": -37.7,
+      "pressurePa": 717
+    },
+    "2022-11-18T18:01:40Z": {
+      "temperatureC": -33.2,
+      "pressurePa": 719
+    },
+    "2022-11-18T18:32:29Z": {
+      "temperatureC": -31.4,
+      "pressurePa": 719
+    },
+    "2022-11-18T19:34:08Z": {
+      "temperatureC": -24.5,
+      "pressurePa": 714
+    },
+    "2022-11-18T20:04:57Z": {
+      "temperatureC": -21.4,
+      "pressurePa": 712
+    },
+    "2022-11-18T20:35:47Z": {
+      "temperatureC": -21.4,
+      "pressurePa": 710
+    },
+    "2022-11-18T21:37:25Z": {
+      "temperatureC": -25.1,
+      "pressurePa": 708
+    },
+    "2022-11-18T22:08:14Z": {
+      "temperatureC": -11.2,
+      "pressurePa": 706
+    },
+    "2022-11-18T22:39:04Z": {
+      "temperatureC": -11.7,
+      "pressurePa": 704
+    },
+    "2022-11-18T23:20:52Z": {
+      "temperatureC": -16.8,
+      "pressurePa": 702
+    },
+    "2022-11-18T23:40:42Z": {
+      "temperatureC": -23.3,
+      "pressurePa": 701
+    },
+    "2022-11-18T23:59:59Z": {
+      "temperatureC": -26.8,
+      "pressurePa": 700
+    }
+  },
+  "aerosol": {
+    "source": {
+      "mission": "Mars 2020 Perseverance",
+      "instrument": "Mastcam-Z",
+      "publisher": "Mark Lemmon, Mendeley Data",
+      "product": "m20-ztau-merged-1717.txt, version 2",
+      "url": "https://doi.org/10.17632/gktjp9jptb.2",
+      "downloadUrl": "https://data.mendeley.com/public-files/datasets/gktjp9jptb/files/5eb62f12-eadf-4e87-b4bc-2966f7a5f00c/file_downloaded",
+      "license": "CC BY 4.0",
+      "resolution": "One 880 nm atmospheric column opacity retrieval per available solar image sequence",
+      "geometry": [
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0614___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0614/WE__0614___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0615___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0615/WE__0615___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0616___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0616/WE__0616___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0617___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0617/WE__0617___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0618___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0618/WE__0618___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0619___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0619/WE__0619___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0620___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0620/WE__0620___________DER_ANCILLARY___________P01.CSV"
+        },
+        {
+          "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0621___________der_ancillary___________p",
+          "version": "1.0",
+          "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0621/WE__0621___________DER_ANCILLARY___________P01.CSV"
+        }
+      ],
+      "timeBasis": "UTC approximated from the nearest same-sol MEDA snapshot and spacecraft-clock offset"
+    },
+    "byDate": {
+      "2022-11-11": [
+        {
+          "tau": 1.0,
+          "uncertainty": 0.032,
+          "localSolarTime": "11:46",
+          "sclk": 721448346,
+          "sequence": "ZCAM01002",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 614,
+          "utc": "2022-11-11T14:27:45Z"
+        }
+      ],
+      "2022-11-12": [
+        {
+          "tau": 0.936,
+          "uncertainty": 0.032,
+          "localSolarTime": "12:32",
+          "sclk": 721539928,
+          "sequence": "ZCAM01058",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 615,
+          "utc": "2022-11-12T15:54:08Z"
+        }
+      ],
+      "2022-11-13": [
+        {
+          "tau": 0.936,
+          "uncertainty": 0.032,
+          "localSolarTime": "12:49",
+          "sclk": 721629741,
+          "sequence": "ZCAM01058",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 616,
+          "utc": "2022-11-13T16:51:02Z"
+        }
+      ],
+      "2022-11-14": [
+        {
+          "tau": 0.949,
+          "uncertainty": 0.021,
+          "localSolarTime": "15:44",
+          "sclk": 721729321,
+          "sequence": "ZCAM01002",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 617,
+          "utc": "2022-11-14T20:30:43Z"
+        }
+      ],
+      "2022-11-15": [
+        {
+          "tau": 0.924,
+          "uncertainty": 0.027,
+          "localSolarTime": "14:30",
+          "sclk": 721813503,
+          "sequence": "ZCAM01039",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 618,
+          "utc": "2022-11-15T19:53:45Z"
+        }
+      ],
+      "2022-11-16": [
+        {
+          "tau": 0.894,
+          "uncertainty": 0.031,
+          "localSolarTime": "13:23",
+          "sclk": 721898176,
+          "sequence": "ZCAM01002",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 619,
+          "utc": "2022-11-16T19:24:59Z"
+        }
+      ],
+      "2022-11-17": [
+        {
+          "tau": 0.94,
+          "uncertainty": 0.033,
+          "localSolarTime": "11:48",
+          "sclk": 721981060,
+          "sequence": "ZCAM01058",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 620,
+          "utc": "2022-11-17T18:26:24Z"
+        }
+      ],
+      "2022-11-18": [
+        {
+          "tau": 0.936,
+          "uncertainty": 0.032,
+          "localSolarTime": "13:04",
+          "sclk": 722074520,
+          "sequence": "ZCAM01521",
+          "latitude": 18.453644,
+          "longitude": 77.399154,
+          "sol": 621,
+          "utc": "2022-11-18T20:24:04Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "file": "jezero-crater.f32",
+  "image": "jezero-crater.webp",
+  "width": 891,
+  "height": 1013,
+  "bounds": {
+    "west": 76.99743706146002,
+    "south": 17.58119473473908,
+    "east": 78.58220759557322,
+    "north": 19.29018700686615
+  },
+  "degreesPerColumn": 0.001778642574762302,
+  "degreesPerRow": 0.0016870604858115219,
+  "metersPerColumn": 100.0,
+  "metersPerRow": 100.0,
+  "coordinates": "Mars planetocentric degrees, east-positive, north up",
+  "units": "meters",
+  "source": {
+    "mission": "Mars Reconnaissance Orbiter",
+    "instrument": "Context Camera (CTX)",
+    "publisher": "USGS Astrogeology Science Center",
+    "productId": "M20_JezeroCrater_CTXDEM_20m.tif",
+    "url": "https://astrogeology.usgs.gov/search/map/mars_2020_science_investigation_ctx_dem_mosaic",
+    "projectedMetersPerPixel": 20.0
+  }
+}

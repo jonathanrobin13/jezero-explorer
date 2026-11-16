@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[3]
 PRODUCT_ID = "PSP_002387_1985_RED_C_01_ORTHO"
 SOURCE = ROOT / "data" / "map" / "HiRISE" / f"{PRODUCT_ID}.JP2"
 OUTPUT = ROOT / "frontend" / "public" / "data" / "map" / "HiRISE"
+MISSION_IMAGE_HEIGHT = 2400
 
 # From this JP2's embedded GeoTIFF keys and tiepoint. The origin is the
 # upper-left pixel edge. Coordinates use planetocentric latitude and east longitude.
@@ -69,6 +70,10 @@ def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     image_path = OUTPUT / "jezero-western-delta.webp"
     image.save(image_path, quality=82, method=6)
+
+    mission_image = image.copy()
+    mission_image.thumbnail((MISSION_IMAGE_HEIGHT, MISSION_IMAGE_HEIGHT), Image.Resampling.LANCZOS)
+    mission_image.save(OUTPUT / "jezero-western-delta-mission.webp", quality=82, method=6)
 
     metadata = {
         "image": image_path.name,

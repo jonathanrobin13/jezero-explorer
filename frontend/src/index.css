@@ -1,1 +1,201 @@
 @import "tailwindcss";
+
+@theme {
+  --color-basalt: #101113;
+  --color-console: #1a1b1e;
+  --color-line: #38393e;
+  --color-ice: #f5f2ed;
+  --color-telemetry: #c0bcb6;
+  --font-display: "Archivo Black", "Arial Black", "Segoe UI", sans-serif;
+  --font-sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, ui-monospace, monospace;
+}
+
+@layer base {
+  :root { color-scheme: dark; }
+  body { @apply bg-basalt text-ice antialiased; }
+  :where(button, summary):not(:disabled) { cursor: pointer; }
+  :where(button, summary, a, input, select):focus-visible {
+    outline: 2px solid #a5f3fc;
+    outline-offset: 3px;
+  }
+  input { accent-color: #a5f3fc; }
+}
+
+@layer components {
+  .mission-hero { background: #2c1b19; }
+  .mission-hero-image {
+    object-position: center 46%;
+    filter: sepia(.73) saturate(1.65) contrast(1.13) brightness(.88);
+  }
+  .mission-hero::after {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    content: '';
+    background:
+      linear-gradient(90deg, #160f10f2, #221312c7 38%, #492a1c32 82%),
+      linear-gradient(0deg, #110d0c, transparent 27%),
+      repeating-linear-gradient(90deg, transparent 0 79px, #ffdfbe22 79px 80px);
+  }
+  .crater-emblem {
+    @apply relative block size-7 rounded-full border border-amber-200;
+    box-shadow: inset 0 0 0 4px #452b21;
+    background: #d69b76;
+  }
+  .crater-emblem::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border-radius: 50%;
+    border: 1px solid #693b29;
+    transform: translate(2px, -1px);
+  }
+  .console-label { @apply font-mono text-[0.68rem] font-semibold uppercase tracking-[0.13em]; }
+  .console-button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-sm border border-line bg-basalt px-3.5 py-2 text-sm font-semibold text-ice motion-safe:transition-colors hover:border-cyan-200/70 hover:bg-[#22272b] disabled:cursor-default disabled:opacity-50;
+  }
+  .console-button-primary { @apply border-cyan-200 bg-cyan-200 text-[#101e21] hover:border-cyan-100 hover:bg-cyan-100; }
+  .console-button-hero { @apply border-white/40 bg-[#171011]/60; }
+  .console-tab {
+    @apply -mb-px min-h-11 border-b-2 border-transparent px-3 py-2 text-sm font-semibold text-telemetry motion-safe:transition-colors hover:text-ice sm:px-5;
+  }
+  .console-tab[aria-current] { @apply border-cyan-200 bg-cyan-200/8 text-cyan-200; }
+  .console-panel { @apply rounded-lg border border-line bg-console; }
+  .console-layout { @apply grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(19rem,26%)] lg:gap-5; }
+  .console-summary {
+    @apply flex list-none items-center justify-between gap-2 px-4 py-3.5 text-base font-semibold text-ice;
+  }
+  .console-summary::-webkit-details-marker { display: none; }
+  .console-summary::after { content: '+'; @apply font-mono text-cyan-200; }
+  .disclosure-panel[open] > .console-summary::after { content: '−'; }
+  .console-link { @apply underline decoration-current/55 underline-offset-3 hover:text-white; }
+  .layer-switch {
+    @apply flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded-sm border border-line bg-basalt px-3 py-2 text-ice motion-safe:transition-colors has-checked:border-cyan-200/70;
+  }
+  .layer-switch small { @apply block text-xs text-telemetry; }
+  .layer-switch input { @apply size-4 shrink-0; }
+  .console-input { @apply min-h-10 min-w-0 rounded-sm border border-line bg-basalt px-2.5 py-1.5 text-ice; }
+  .survey-map { @apply relative select-none overflow-hidden bg-basalt; }
+  .map-chip {
+    @apply rounded-sm border border-white/25 bg-basalt/90 px-2 py-1.5 font-mono text-[0.63rem] font-medium tracking-wide text-ice sm:text-[0.68rem];
+  }
+  .map-tool { @apply min-h-10 min-w-10 bg-basalt/90 px-2.5 py-1.5; }
+  .map-overlay {
+    @apply pointer-events-none opacity-0 motion-safe:transition-opacity motion-safe:duration-250;
+  }
+  .map-overlay[data-visible='true'] { @apply opacity-100; }
+  .map-landmark-dot {
+    @apply absolute size-3 -translate-1/2 rotate-45 border-2 border-amber-100 bg-[#3a2921];
+    box-shadow: 0 0 0 1px #15110d;
+  }
+  .map-place-label-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 18;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .map-place-label {
+    position: absolute;
+    display: grid;
+    gap: .05rem;
+    max-width: min(9rem, 34vw);
+    padding: .22rem .4rem;
+    border: 1px solid #d9c6a9a6;
+    border-radius: .2rem;
+    background: #171311df;
+    box-shadow: 0 2px 8px #0009;
+    transform: translate(.55rem, -50%);
+  }
+  .map-place-label::before {
+    position: absolute;
+    top: 50%;
+    left: -.42rem;
+    width: .38rem;
+    border-top: 1px solid #f2d8b8;
+    content: '';
+  }
+  .map-place-label-left { transform: translate(calc(-100% - .55rem), -50%); }
+  .map-place-label-left::before { left: auto; right: -.42rem; }
+  .map-place-label-name { color: #fff0db; font: 700 .65rem/1.15 var(--font-sans); white-space: nowrap; }
+  .map-place-label-type { color: #d1c6b9; font: 500 .56rem/1.15 var(--font-sans); white-space: nowrap; }
+  .geology-marker {
+    @apply flex size-7 items-center justify-center rounded-full border-2 text-sm shadow-[0_2px_12px_#000b] motion-safe:transition-transform hover:z-40 hover:scale-110 focus-visible:z-40;
+  }
+  .geology-marker-mineral { @apply border-cyan-100 bg-[#12383b] text-cyan-100; }
+  .geology-marker-water { @apply border-sky-100 bg-[#172c48] text-sky-100; }
+  .geology-marker-symbol { @apply leading-none; }
+  .geology-marker-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    max-width: 8rem;
+    overflow: hidden;
+    padding: .2rem .35rem;
+    border: 1px solid #607477;
+    border-radius: .2rem;
+    background: #101719ed;
+    color: #f5f2ed;
+    font: 600 .65rem/1.25 var(--font-sans);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 120ms ease;
+  }
+  .geology-tooltip-right .geology-marker-label { left: calc(100% + .3rem); text-align: left; }
+  .geology-tooltip-left .geology-marker-label { right: calc(100% + .3rem); text-align: right; }
+  .geology-marker[data-show-label='true'] .geology-marker-label { opacity: 1; visibility: visible; }
+  .geology-tooltip {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    width: min(18rem, 76vw);
+    padding: .75rem;
+    border: 1px solid #5f7778;
+    border-radius: .35rem;
+    background: #101719f5;
+    color: #f5f2ed;
+    text-align: left;
+    font-size: .72rem;
+    font-weight: 400;
+    line-height: 1.45;
+    box-shadow: 0 8px 28px #0009;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    transition: opacity 120ms ease;
+  }
+  .geology-tooltip-right .geology-tooltip { left: calc(100% + .55rem); }
+  .geology-tooltip-left .geology-tooltip { right: calc(100% + .55rem); }
+  .geology-tooltip-bottom .geology-tooltip { top: 50%; transform: translateY(-15%); }
+  .geology-tooltip-top .geology-tooltip { top: auto; bottom: 50%; transform: translateY(15%); }
+  .geology-marker:hover .geology-tooltip,
+  .geology-marker:focus-visible .geology-tooltip { opacity: 1; visibility: visible; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @starting-style {
+    .map-overlay[data-visible='true'] { opacity: 0; }
+  }
+  .map-layer-enter {
+    animation: map-layer-enter 220ms ease-out both;
+  }
+  .route-trace {
+    stroke-dasharray: 1;
+    animation: route-trace 560ms cubic-bezier(.2, .65, .3, 1) both;
+  }
+}
+
+@keyframes map-layer-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes route-trace {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}

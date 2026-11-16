@@ -1,0 +1,1384 @@
+{
+  "source": {
+    "mission": "Mars 2020 Perseverance",
+    "instrument": "MEDA Radiation and Dust Sensor, top photodiode 3",
+    "publisher": "NASA Planetary Data System, Planetary Atmospheres Node",
+    "url": "https://doi.org/10.17189/1522849",
+    "instrumentPaper": "https://doi.org/10.1007/s11214-021-00816-9",
+    "frameKernel": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/m2020_v04.tf",
+    "landingSiteCoordinates": "https://ntrs.nasa.gov/api/citations/20210024320/downloads/MEADSreconstruction.pdf",
+    "products": [
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0614___________cal_rds_________________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0614/WE__0614___________CAL_RDS_________________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0614___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0614/WE__0614___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0615___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0615/WE__0615___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0615___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0615/WE__0615___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0616___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0616/WE__0616___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0616___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0616/WE__0616___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0617___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0617/WE__0617___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0617___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0617/WE__0617___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0618___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0618/WE__0618___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0618___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0618/WE__0618___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0619___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0619/WE__0619___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0619___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0619/WE__0619___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0620___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0620/WE__0620___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0620___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0620/WE__0620___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0621___________cal_rds_________________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0621/WE__0621___________CAL_RDS_________________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0621___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0621/WE__0621___________DER_ANCILLARY___________P01.CSV"
+      }
+    ],
+    "wavelengthNm": [
+      250,
+      400
+    ],
+    "units": "W/m²",
+    "coverageUtc": [
+      "2022-11-11",
+      "2022-11-18"
+    ],
+    "resolution": "Rover point observations, native ~1 Hz when observing, one snapshot per occupied 30-minute local true solar time bin per product",
+    "coordinates": "Mars planetocentric degrees, east-positive"
+  },
+  "samples": [
+    {
+      "sol": 614,
+      "sclk": 721427959,
+      "utc": "2022-11-11T08:47:58Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00260509
+    },
+    {
+      "sol": 614,
+      "sclk": 721431658,
+      "utc": "2022-11-11T09:49:37Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01368645
+    },
+    {
+      "sol": 614,
+      "sclk": 721433507,
+      "utc": "2022-11-11T10:20:26Z",
+      "localSolarTime": "07:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02255698
+    },
+    {
+      "sol": 614,
+      "sclk": 721435357,
+      "utc": "2022-11-11T10:51:16Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03278903
+    },
+    {
+      "sol": 614,
+      "sclk": 721439055,
+      "utc": "2022-11-11T11:52:54Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06195671
+    },
+    {
+      "sol": 614,
+      "sclk": 721440905,
+      "utc": "2022-11-11T12:23:44Z",
+      "localSolarTime": "09:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.08285644
+    },
+    {
+      "sol": 614,
+      "sclk": 721442754,
+      "utc": "2022-11-11T12:54:33Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.10716764
+    },
+    {
+      "sol": 614,
+      "sclk": 721446453,
+      "utc": "2022-11-11T13:56:12Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16066889
+    },
+    {
+      "sol": 614,
+      "sclk": 721448302,
+      "utc": "2022-11-11T14:27:01Z",
+      "localSolarTime": "11:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17168912
+    },
+    {
+      "sol": 614,
+      "sclk": 721450152,
+      "utc": "2022-11-11T14:57:51Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.15705397
+    },
+    {
+      "sol": 614,
+      "sclk": 721453850,
+      "utc": "2022-11-11T15:59:29Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09600779
+    },
+    {
+      "sol": 614,
+      "sclk": 721455700,
+      "utc": "2022-11-11T16:30:19Z",
+      "localSolarTime": "13:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.07170314
+    },
+    {
+      "sol": 614,
+      "sclk": 721457549,
+      "utc": "2022-11-11T17:01:08Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05304153
+    },
+    {
+      "sol": 614,
+      "sclk": 721461248,
+      "utc": "2022-11-11T18:02:47Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02769839
+    },
+    {
+      "sol": 614,
+      "sclk": 721463097,
+      "utc": "2022-11-11T18:33:36Z",
+      "localSolarTime": "15:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01679424
+    },
+    {
+      "sol": 614,
+      "sclk": 721464946,
+      "utc": "2022-11-11T19:04:25Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01331979
+    },
+    {
+      "sol": 614,
+      "sclk": 721468645,
+      "utc": "2022-11-11T20:06:05Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00500816
+    },
+    {
+      "sol": 614,
+      "sclk": 721470494,
+      "utc": "2022-11-11T20:36:54Z",
+      "localSolarTime": "17:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00215824
+    },
+    {
+      "sol": 615,
+      "sclk": 721516728,
+      "utc": "2022-11-12T09:27:28Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00247136
+    },
+    {
+      "sol": 615,
+      "sclk": 721518577,
+      "utc": "2022-11-12T09:58:17Z",
+      "localSolarTime": "06:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00773776
+    },
+    {
+      "sol": 615,
+      "sclk": 721520427,
+      "utc": "2022-11-12T10:29:07Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01430809
+    },
+    {
+      "sol": 615,
+      "sclk": 721524125,
+      "utc": "2022-11-12T11:30:45Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03273951
+    },
+    {
+      "sol": 615,
+      "sclk": 721525975,
+      "utc": "2022-11-12T12:01:35Z",
+      "localSolarTime": "08:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.04623577
+    },
+    {
+      "sol": 615,
+      "sclk": 721527824,
+      "utc": "2022-11-12T12:32:24Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06353667
+    },
+    {
+      "sol": 615,
+      "sclk": 721531523,
+      "utc": "2022-11-12T13:34:03Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11255003
+    },
+    {
+      "sol": 615,
+      "sclk": 721533372,
+      "utc": "2022-11-12T14:04:52Z",
+      "localSolarTime": "10:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.14219545
+    },
+    {
+      "sol": 615,
+      "sclk": 721535221,
+      "utc": "2022-11-12T14:35:41Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16749108
+    },
+    {
+      "sol": 615,
+      "sclk": 721538920,
+      "utc": "2022-11-12T15:37:20Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.15895852
+    },
+    {
+      "sol": 615,
+      "sclk": 721540770,
+      "utc": "2022-11-12T16:08:10Z",
+      "localSolarTime": "12:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.1280756
+    },
+    {
+      "sol": 615,
+      "sclk": 721542619,
+      "utc": "2022-11-12T16:38:59Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09735512
+    },
+    {
+      "sol": 615,
+      "sclk": 721546318,
+      "utc": "2022-11-12T17:40:38Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05369389
+    },
+    {
+      "sol": 615,
+      "sclk": 721548167,
+      "utc": "2022-11-12T18:11:27Z",
+      "localSolarTime": "14:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03877461
+    },
+    {
+      "sol": 615,
+      "sclk": 721550016,
+      "utc": "2022-11-12T18:42:16Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0281223
+    },
+    {
+      "sol": 615,
+      "sclk": 721553715,
+      "utc": "2022-11-12T19:43:55Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01359999
+    },
+    {
+      "sol": 615,
+      "sclk": 721555564,
+      "utc": "2022-11-12T20:14:44Z",
+      "localSolarTime": "16:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00937206
+    },
+    {
+      "sol": 615,
+      "sclk": 721557414,
+      "utc": "2022-11-12T20:45:34Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00563433
+    },
+    {
+      "sol": 616,
+      "sclk": 721605496,
+      "utc": "2022-11-13T10:06:57Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00226912
+    },
+    {
+      "sol": 616,
+      "sclk": 721609195,
+      "utc": "2022-11-13T11:08:36Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01404539
+    },
+    {
+      "sol": 616,
+      "sclk": 721611044,
+      "utc": "2022-11-13T11:39:25Z",
+      "localSolarTime": "07:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02204107
+    },
+    {
+      "sol": 616,
+      "sclk": 721612894,
+      "utc": "2022-11-13T12:10:15Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03279061
+    },
+    {
+      "sol": 616,
+      "sclk": 721616592,
+      "utc": "2022-11-13T13:11:53Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06302112
+    },
+    {
+      "sol": 616,
+      "sclk": 721618442,
+      "utc": "2022-11-13T13:42:43Z",
+      "localSolarTime": "09:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.08552024
+    },
+    {
+      "sol": 616,
+      "sclk": 721620291,
+      "utc": "2022-11-13T14:13:32Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.10995776
+    },
+    {
+      "sol": 616,
+      "sclk": 721623990,
+      "utc": "2022-11-13T15:15:11Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16709847
+    },
+    {
+      "sol": 616,
+      "sclk": 721625839,
+      "utc": "2022-11-13T15:46:00Z",
+      "localSolarTime": "11:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17650433
+    },
+    {
+      "sol": 616,
+      "sclk": 721627688,
+      "utc": "2022-11-13T16:16:49Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.15926214
+    },
+    {
+      "sol": 616,
+      "sclk": 721629538,
+      "utc": "2022-11-13T16:47:39Z",
+      "localSolarTime": "12:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.12744881
+    },
+    {
+      "sol": 616,
+      "sclk": 721631387,
+      "utc": "2022-11-13T17:18:28Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09616143
+    },
+    {
+      "sol": 616,
+      "sclk": 721633236,
+      "utc": "2022-11-13T17:49:17Z",
+      "localSolarTime": "13:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.07148143
+    },
+    {
+      "sol": 616,
+      "sclk": 721635086,
+      "utc": "2022-11-13T18:20:07Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0531167
+    },
+    {
+      "sol": 616,
+      "sclk": 721638784,
+      "utc": "2022-11-13T19:21:45Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02821905
+    },
+    {
+      "sol": 616,
+      "sclk": 721640634,
+      "utc": "2022-11-13T19:52:35Z",
+      "localSolarTime": "15:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01718861
+    },
+    {
+      "sol": 616,
+      "sclk": 721642483,
+      "utc": "2022-11-13T20:23:24Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0138192
+    },
+    {
+      "sol": 616,
+      "sclk": 721646182,
+      "utc": "2022-11-13T21:25:03Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00540943
+    },
+    {
+      "sol": 616,
+      "sclk": 721648031,
+      "utc": "2022-11-13T21:55:52Z",
+      "localSolarTime": "17:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00243408
+    },
+    {
+      "sol": 617,
+      "sclk": 721694264,
+      "utc": "2022-11-14T10:46:25Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00316347
+    },
+    {
+      "sol": 617,
+      "sclk": 721696114,
+      "utc": "2022-11-14T11:17:15Z",
+      "localSolarTime": "06:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00790831
+    },
+    {
+      "sol": 617,
+      "sclk": 721697963,
+      "utc": "2022-11-14T11:48:04Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01382505
+    },
+    {
+      "sol": 617,
+      "sclk": 721701662,
+      "utc": "2022-11-14T12:49:43Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03349988
+    },
+    {
+      "sol": 617,
+      "sclk": 721703511,
+      "utc": "2022-11-14T13:20:32Z",
+      "localSolarTime": "08:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.04714749
+    },
+    {
+      "sol": 617,
+      "sclk": 721705360,
+      "utc": "2022-11-14T13:51:21Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0658548
+    },
+    {
+      "sol": 617,
+      "sclk": 721709059,
+      "utc": "2022-11-14T14:53:00Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11342736
+    },
+    {
+      "sol": 617,
+      "sclk": 721710908,
+      "utc": "2022-11-14T15:23:49Z",
+      "localSolarTime": "10:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.14420423
+    },
+    {
+      "sol": 617,
+      "sclk": 721712758,
+      "utc": "2022-11-14T15:54:39Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17217167
+    },
+    {
+      "sol": 617,
+      "sclk": 721716456,
+      "utc": "2022-11-14T16:56:17Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16595432
+    },
+    {
+      "sol": 617,
+      "sclk": 721718306,
+      "utc": "2022-11-14T17:27:07Z",
+      "localSolarTime": "12:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.13350923
+    },
+    {
+      "sol": 617,
+      "sclk": 721720155,
+      "utc": "2022-11-14T17:57:56Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09967492
+    },
+    {
+      "sol": 617,
+      "sclk": 721723854,
+      "utc": "2022-11-14T18:59:36Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05433266
+    },
+    {
+      "sol": 617,
+      "sclk": 721725703,
+      "utc": "2022-11-14T19:30:25Z",
+      "localSolarTime": "14:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0387289
+    },
+    {
+      "sol": 617,
+      "sclk": 721727552,
+      "utc": "2022-11-14T20:01:14Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02839588
+    },
+    {
+      "sol": 617,
+      "sclk": 721729402,
+      "utc": "2022-11-14T20:32:04Z",
+      "localSolarTime": "15:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0173444
+    },
+    {
+      "sol": 617,
+      "sclk": 721731251,
+      "utc": "2022-11-14T21:02:53Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01434365
+    },
+    {
+      "sol": 617,
+      "sclk": 721733100,
+      "utc": "2022-11-14T21:33:42Z",
+      "localSolarTime": "16:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00944727
+    },
+    {
+      "sol": 617,
+      "sclk": 721734950,
+      "utc": "2022-11-14T22:04:32Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00543114
+    },
+    {
+      "sol": 618,
+      "sclk": 721783032,
+      "utc": "2022-11-15T11:25:54Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00316322
+    },
+    {
+      "sol": 618,
+      "sclk": 721786731,
+      "utc": "2022-11-15T12:27:33Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01506027
+    },
+    {
+      "sol": 618,
+      "sclk": 721788580,
+      "utc": "2022-11-15T12:58:22Z",
+      "localSolarTime": "07:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02354629
+    },
+    {
+      "sol": 618,
+      "sclk": 721790429,
+      "utc": "2022-11-15T13:29:11Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03463708
+    },
+    {
+      "sol": 618,
+      "sclk": 721794128,
+      "utc": "2022-11-15T14:30:50Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06730808
+    },
+    {
+      "sol": 618,
+      "sclk": 721795977,
+      "utc": "2022-11-15T15:01:39Z",
+      "localSolarTime": "09:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09103588
+    },
+    {
+      "sol": 618,
+      "sclk": 721797826,
+      "utc": "2022-11-15T15:32:28Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11777972
+    },
+    {
+      "sol": 618,
+      "sclk": 721801525,
+      "utc": "2022-11-15T16:34:07Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17370708
+    },
+    {
+      "sol": 618,
+      "sclk": 721803374,
+      "utc": "2022-11-15T17:04:56Z",
+      "localSolarTime": "11:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.18271362
+    },
+    {
+      "sol": 618,
+      "sclk": 721805224,
+      "utc": "2022-11-15T17:35:46Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16492907
+    },
+    {
+      "sol": 618,
+      "sclk": 721808922,
+      "utc": "2022-11-15T18:37:24Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09846921
+    },
+    {
+      "sol": 618,
+      "sclk": 721810772,
+      "utc": "2022-11-15T19:08:14Z",
+      "localSolarTime": "13:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.07279624
+    },
+    {
+      "sol": 618,
+      "sclk": 721812621,
+      "utc": "2022-11-15T19:39:03Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05409592
+    },
+    {
+      "sol": 618,
+      "sclk": 721814470,
+      "utc": "2022-11-15T20:09:52Z",
+      "localSolarTime": "14:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03884874
+    },
+    {
+      "sol": 618,
+      "sclk": 721816320,
+      "utc": "2022-11-15T20:40:42Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0282503
+    },
+    {
+      "sol": 618,
+      "sclk": 721818169,
+      "utc": "2022-11-15T21:11:31Z",
+      "localSolarTime": "15:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01760615
+    },
+    {
+      "sol": 618,
+      "sclk": 721820018,
+      "utc": "2022-11-15T21:42:20Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01406436
+    },
+    {
+      "sol": 618,
+      "sclk": 721823717,
+      "utc": "2022-11-15T22:43:59Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00507825
+    },
+    {
+      "sol": 618,
+      "sclk": 721825566,
+      "utc": "2022-11-15T23:14:48Z",
+      "localSolarTime": "17:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00221956
+    },
+    {
+      "sol": 619,
+      "sclk": 721871799,
+      "utc": "2022-11-16T12:05:22Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00226321
+    },
+    {
+      "sol": 619,
+      "sclk": 721873648,
+      "utc": "2022-11-16T12:36:11Z",
+      "localSolarTime": "06:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00798928
+    },
+    {
+      "sol": 619,
+      "sclk": 721875498,
+      "utc": "2022-11-16T13:07:01Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01448391
+    },
+    {
+      "sol": 619,
+      "sclk": 721879196,
+      "utc": "2022-11-16T14:08:39Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03350463
+    },
+    {
+      "sol": 619,
+      "sclk": 721881046,
+      "utc": "2022-11-16T14:39:29Z",
+      "localSolarTime": "08:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.04772669
+    },
+    {
+      "sol": 619,
+      "sclk": 721882895,
+      "utc": "2022-11-16T15:10:18Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06599084
+    },
+    {
+      "sol": 619,
+      "sclk": 721886594,
+      "utc": "2022-11-16T16:11:57Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11395723
+    },
+    {
+      "sol": 619,
+      "sclk": 721890292,
+      "utc": "2022-11-16T17:13:35Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17515274
+    },
+    {
+      "sol": 619,
+      "sclk": 721893991,
+      "utc": "2022-11-16T18:15:14Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.16777162
+    },
+    {
+      "sol": 619,
+      "sclk": 721897689,
+      "utc": "2022-11-16T19:16:52Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.09998888
+    },
+    {
+      "sol": 619,
+      "sclk": 721901388,
+      "utc": "2022-11-16T20:18:31Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05432172
+    },
+    {
+      "sol": 619,
+      "sclk": 721905087,
+      "utc": "2022-11-16T21:20:10Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02842679
+    },
+    {
+      "sol": 619,
+      "sclk": 721908785,
+      "utc": "2022-11-16T22:21:48Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01224908
+    },
+    {
+      "sol": 619,
+      "sclk": 721912484,
+      "utc": "2022-11-16T23:23:27Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00571264
+    },
+    {
+      "sol": 620,
+      "sclk": 721960566,
+      "utc": "2022-11-17T12:44:49Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00404092
+    },
+    {
+      "sol": 620,
+      "sclk": 721962196,
+      "utc": "2022-11-17T13:11:59Z",
+      "localSolarTime": "06:41:27",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00772711
+    },
+    {
+      "sol": 620,
+      "sclk": 721964265,
+      "utc": "2022-11-17T13:46:28Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01472131
+    },
+    {
+      "sol": 620,
+      "sclk": 721967963,
+      "utc": "2022-11-17T14:48:06Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03384856
+    },
+    {
+      "sol": 620,
+      "sclk": 721971662,
+      "utc": "2022-11-17T15:49:45Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0673122
+    },
+    {
+      "sol": 620,
+      "sclk": 721975360,
+      "utc": "2022-11-17T16:51:24Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11845467
+    },
+    {
+      "sol": 620,
+      "sclk": 721979059,
+      "utc": "2022-11-17T17:53:03Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.18300895
+    },
+    {
+      "sol": 620,
+      "sclk": 721980908,
+      "utc": "2022-11-17T18:23:52Z",
+      "localSolarTime": "11:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.19710161
+    },
+    {
+      "sol": 620,
+      "sclk": 721982758,
+      "utc": "2022-11-17T18:54:42Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17319667
+    },
+    {
+      "sol": 620,
+      "sclk": 721986456,
+      "utc": "2022-11-17T19:56:20Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.10320416
+    },
+    {
+      "sol": 620,
+      "sclk": 721988306,
+      "utc": "2022-11-17T20:27:10Z",
+      "localSolarTime": "13:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.07485796
+    },
+    {
+      "sol": 620,
+      "sclk": 721990155,
+      "utc": "2022-11-17T20:57:59Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05474329
+    },
+    {
+      "sol": 620,
+      "sclk": 721993853,
+      "utc": "2022-11-17T21:59:37Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02843139
+    },
+    {
+      "sol": 620,
+      "sclk": 721995703,
+      "utc": "2022-11-17T22:30:27Z",
+      "localSolarTime": "15:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01636439
+    },
+    {
+      "sol": 620,
+      "sclk": 721997552,
+      "utc": "2022-11-17T23:01:16Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0123048
+    },
+    {
+      "sol": 620,
+      "sclk": 722001251,
+      "utc": "2022-11-18T00:02:55Z",
+      "localSolarTime": "17:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00526745
+    },
+    {
+      "sol": 620,
+      "sclk": 722003100,
+      "utc": "2022-11-18T00:33:44Z",
+      "localSolarTime": "17:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00231977
+    },
+    {
+      "sol": 621,
+      "sclk": 722049332,
+      "utc": "2022-11-18T13:24:16Z",
+      "localSolarTime": "06:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00321868
+    },
+    {
+      "sol": 621,
+      "sclk": 722051182,
+      "utc": "2022-11-18T13:55:06Z",
+      "localSolarTime": "06:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.00837731
+    },
+    {
+      "sol": 621,
+      "sclk": 722053031,
+      "utc": "2022-11-18T14:25:55Z",
+      "localSolarTime": "07:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01461222
+    },
+    {
+      "sol": 621,
+      "sclk": 722056730,
+      "utc": "2022-11-18T15:27:34Z",
+      "localSolarTime": "08:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.03468716
+    },
+    {
+      "sol": 621,
+      "sclk": 722058579,
+      "utc": "2022-11-18T15:58:23Z",
+      "localSolarTime": "08:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.04849461
+    },
+    {
+      "sol": 621,
+      "sclk": 722060428,
+      "utc": "2022-11-18T16:29:12Z",
+      "localSolarTime": "09:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.06751352
+    },
+    {
+      "sol": 621,
+      "sclk": 722064127,
+      "utc": "2022-11-18T17:30:51Z",
+      "localSolarTime": "10:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.11917609
+    },
+    {
+      "sol": 621,
+      "sclk": 722065976,
+      "utc": "2022-11-18T18:01:40Z",
+      "localSolarTime": "10:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.15447491
+    },
+    {
+      "sol": 621,
+      "sclk": 722067825,
+      "utc": "2022-11-18T18:32:29Z",
+      "localSolarTime": "11:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.18701164
+    },
+    {
+      "sol": 621,
+      "sclk": 722071524,
+      "utc": "2022-11-18T19:34:08Z",
+      "localSolarTime": "12:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.17544125
+    },
+    {
+      "sol": 621,
+      "sclk": 722073373,
+      "utc": "2022-11-18T20:04:57Z",
+      "localSolarTime": "12:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.13817266
+    },
+    {
+      "sol": 621,
+      "sclk": 722075223,
+      "utc": "2022-11-18T20:35:47Z",
+      "localSolarTime": "13:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.10274473
+    },
+    {
+      "sol": 621,
+      "sclk": 722078921,
+      "utc": "2022-11-18T21:37:25Z",
+      "localSolarTime": "14:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.05569839
+    },
+    {
+      "sol": 621,
+      "sclk": 722080770,
+      "utc": "2022-11-18T22:08:14Z",
+      "localSolarTime": "14:45:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.04031352
+    },
+    {
+      "sol": 621,
+      "sclk": 722082620,
+      "utc": "2022-11-18T22:39:04Z",
+      "localSolarTime": "15:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.02930893
+    },
+    {
+      "sol": 621,
+      "sclk": 722085128,
+      "utc": "2022-11-18T23:20:52Z",
+      "localSolarTime": "15:55:41",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01521924
+    },
+    {
+      "sol": 621,
+      "sclk": 722086318,
+      "utc": "2022-11-18T23:40:42Z",
+      "localSolarTime": "16:15:00",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.01281662
+    },
+    {
+      "sol": 621,
+      "sclk": 722087475,
+      "utc": "2022-11-18T23:59:59Z",
+      "localSolarTime": "16:33:46",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "wattsPerSquareMeter": 0.0106382
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 import { BufferAttribute, BufferGeometry } from 'three'
 import { createTerrainMesh } from './terrainMesh.js'
 
-const PLAY_MARGIN = 3600
+const PLAY_MARGIN = 4800
 const SCENERY_MARGIN = 12000
 const OUTER_STEP = 160
+const SEAM_WIDTH = 480
 
 function triangleHeight(fractionX, fractionZ, nw, ne, sw, se) {
   if (fractionX + fractionZ <= 1) {
@@ -36,7 +37,23 @@ function paddedAxis(axis) {
 
 const clamp = (value, low, high) => Math.max(low, Math.min(high, value))
 
-export function createMissionWorld(terrain, bounds) {
+function sampleRegional(regional, longitude, latitude) {
+  if (!regional) return null
+  const { grid, elevations } = regional
+  const column = (longitude - grid.bounds.west) / grid.degreesPerColumn - 0.5
+  const row = (grid.bounds.north - latitude) / grid.degreesPerRow - 0.5
+  const x = Math.floor(column)
+  const z = Math.floor(row)
+  if (x < 0 || x + 1 >= grid.width || z < 0 || z + 1 >= grid.height) return null
+  const northwest = z * grid.width + x
+  const corners = [elevations[northwest], elevations[northwest + 1],
+    elevations[northwest + grid.width], elevations[northwest + grid.width + 1]]
+  return corners.every(Number.isFinite)
+    ? triangleHeight(column - x, row - z, ...corners)
+    : null
+}
+
+export function createMissionWorld(terrain, bounds, regional = null) {
   const model = createTerrainMesh(terrain, bounds)
   const realGeometry = model.geometry.scale(1000, 1000, 1000)
   const positions = realGeometry.getAttribute('position')
@@ -50,6 +67,10 @@ export function createMissionWorld(terrain, bounds) {
   const xMax = realX.at(-1)
   const zMin = realZ[0]
   const zMax = realZ.at(-1)
+  const firstU = uvs.getX(0)
+  const firstV = uvs.getY(0)
+  const lastU = uvs.getX(positions.count - 1)
+  const lastV = uvs.getY(positions.count - 1)
   const real = { xMin, xMax, zMin, zMax }
   const play = {
     xMin: xMin - PLAY_MARGIN, xMax: xMax + PLAY_MARGIN,
@@ -76,21 +97,30 @@ export function createMissionWorld(terrain, bounds) {
     )
   }
 
-  function generatedHeight(x, z) {
+  function exteriorSample(x, z) {
     const edgeX = clamp(x, xMin, xMax)
     const edgeZ = clamp(z, zMin, zMax)
     const distance = Math.hypot(x - edgeX, z - edgeZ)
+    const edgeHeight = realHeight(edgeX, edgeZ) ?? 0
+    const { longitude, latitude } = coordinates(x, z)
+    const actual = sampleRegional(regional, longitude, latitude)
+    if (actual !== null) {
+      const t = Math.min(1, distance / SEAM_WIDTH)
+      const weight = t * t * (3 - 2 * t)
+      return { height: edgeHeight * (1 - weight) + (actual - model.elevationOriginMeters) * weight, regional: true }
+    }
     const blend = Math.min(1, distance / 1850)
     const smooth = blend * blend * (3 - 2 * blend)
     const relief = -90 + 72 * Math.sin(x / 875) * Math.cos(z / 960)
       + 41 * Math.sin((x + z) / 480)
       + 184 * Math.cos(x / 3000) * Math.sin(z / 2400)
-    return (realHeight(edgeX, edgeZ) ?? 0) * (1 - smooth) + relief * smooth
+    return { height: edgeHeight * (1 - smooth) + relief * smooth, regional: false }
   }
 
   const xs = paddedAxis(realX)
   const zs = paddedAxis(realZ)
   const ground = new Float32Array(xs.length * zs.length * 3)
+  const regionalVertices = new Uint8Array(xs.length * zs.length)
   const faces = []
   for (let row = 0; row < zs.length; row++) {
     for (let col = 0; col < xs.length; col++) {
@@ -98,7 +128,14 @@ export function createMissionWorld(terrain, bounds) {
       const z = zs[row]
       const vertex = row * xs.length + col
       ground[vertex * 3] = x
-      ground[vertex * 3 + 1] = generatedHeight(x, z)
+      if (!inside(real, x, z)) {
+        const sample = exteriorSample(x, z)
+        ground[vertex * 3 + 1] = sample.height
+        regionalVertices[vertex] = Number(sample.regional)
+      } else if (x === xMin || x === xMax || z === zMin || z === zMax) {
+        ground[vertex * 3 + 1] = realHeight(x, z) ?? 0
+        regionalVertices[vertex] = Number(Boolean(regional))
+      }
       ground[vertex * 3 + 2] = z
       if (!col || !row) continue
       if (xs[col - 1] >= xMin && x <= xMax && zs[row - 1] >= zMin && z <= zMax) continue
@@ -128,11 +165,6 @@ export function createMissionWorld(terrain, bounds) {
     )
   }
 
-  const firstU = uvs.getX(0)
-  const firstV = uvs.getY(0)
-  const lastU = uvs.getX(positions.count - 1)
-  const lastV = uvs.getY(positions.count - 1)
-
   function groundPosition(u, v) {
     return {
       x: xMin + (u - firstU) / (lastU - firstU) * (xMax - xMin),
@@ -150,21 +182,33 @@ export function createMissionWorld(terrain, bounds) {
   }
 
   function telemetry(x, z) {
-    if (!inside(real, x, z)) return { source: 'generated', elevation: null, grade: null }
-    const height = realHeight(x, z)
+    const detailed = inside(real, x, z)
+    const col = segment(xs, x)
+    const row = segment(zs, z)
+    const corner = row * xs.length + col
+    if (!detailed && ![corner, corner + 1, corner + xs.length, corner + xs.length + 1].every(index => regionalVertices[index])) {
+      return { source: 'generated', elevation: null, grade: null }
+    }
+    const height = heightAt(x, z)
     if (height === null) return { source: 'gap', elevation: null, grade: null }
-    // Use differences on the displayed surface and avoid crossing the data edge.
-    const left = Math.max(xMin, x - 10)
-    const right = Math.min(xMax, x + 10)
-    const top = Math.max(zMin, z - 10)
-    const bottom = Math.min(zMax, z + 10)
-    const west = realHeight(left, z)
-    const east = realHeight(right, z)
-    const north = realHeight(x, top)
-    const south = realHeight(x, bottom)
+    // The grade comes from the single mesh triangle below the player.
+    const axisX = detailed ? realX : xs
+    const axisZ = detailed ? realZ : zs
+    const ix = segment(axisX, x)
+    const iz = segment(axisZ, z)
+    const x0 = axisX[ix]
+    const z0 = axisZ[iz]
+    const x1 = axisX[ix + 1]
+    const z1 = axisZ[iz + 1]
+    const northWest = (x - x0) / (x1 - x0) + (z - z0) / (z1 - z0) <= 1
+    const sample = detailed ? realHeight : heightAt
+    const west = sample(x0, northWest ? z0 : z1)
+    const east = sample(x1, northWest ? z0 : z1)
+    const north = sample(northWest ? x0 : x1, z0)
+    const south = sample(northWest ? x0 : x1, z1)
     const grade = [west, east, north, south].includes(null) ? null
-      : 100 * Math.hypot((east - west) / (right - left), (south - north) / (bottom - top))
-    return { source: 'ctx', elevation: height + model.elevationOriginMeters, grade }
+      : 100 * Math.hypot((east - west) / (x1 - x0), (south - north) / (z1 - z0))
+    return { source: detailed ? 'ctx' : 'regional', elevation: height + model.elevationOriginMeters, grade }
   }
 
   return { real, play, realX, realZ, realGeometry, exterior, heightAt, groundPosition, coordinates, telemetry }

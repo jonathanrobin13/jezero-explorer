@@ -1,0 +1,401 @@
+{
+  "source": {
+    "mission": "Mars 2020 Perseverance",
+    "instrument": "MEDA Radiation and Dust Sensor, top photodiode 3",
+    "publisher": "NASA Planetary Data System, Planetary Atmospheres Node",
+    "url": "https://doi.org/10.17189/1522849",
+    "instrumentPaper": "https://doi.org/10.1007/s11214-021-00816-9",
+    "frameKernel": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/m2020_v04.tf",
+    "landingSiteCoordinates": "https://ntrs.nasa.gov/api/citations/20210024320/downloads/MEADSreconstruction.pdf",
+    "waypointIndex": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json",
+    "units": "W/m²",
+    "coordinates": "Mars planetocentric degrees, east-positive",
+    "wavelengthNm": [
+      250,
+      400
+    ],
+    "coverageUtc": [
+      "2021-07-26T18:51:57Z",
+      "2024-12-09T00:21:29Z"
+    ],
+    "resolution": "Rover point observations, native approximately 1 Hz during instrument sessions",
+    "products": [
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0154___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0154/WE__0154___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0154___________der_ancillary___________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0154/WE__0154___________DER_ANCILLARY___________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0380___________cal_rds_________________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0300_0419/sol_0380/WE__0380___________CAL_RDS_________________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0380___________der_ancillary___________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0300_0419/sol_0380/WE__0380___________DER_ANCILLARY___________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0403___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0300_0419/sol_0403/WE__0403___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0403___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0300_0419/sol_0403/WE__0403___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0614___________cal_rds_________________p",
+        "version": "2.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0540_0659/sol_0614/WE__0614___________CAL_RDS_________________P02.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0614___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0540_0659/sol_0614/WE__0614___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0756___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0756/WE__0756___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0756___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0660_0779/sol_0756/WE__0756___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0785___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0780_0899/sol_0785/WE__0785___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0785___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0780_0899/sol_0785/WE__0785___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0910___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0900_1019/sol_0910/WE__0910___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0910___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0900_1019/sol_0910/WE__0910___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0995___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0900_1019/sol_0995/WE__0995___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0995___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0900_1019/sol_0995/WE__0995___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1020___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1020_1139/sol_1020/WE__1020___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1020___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1020_1139/sol_1020/WE__1020___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1097___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1020_1139/sol_1097/WE__1097___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1097___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1020_1139/sol_1097/WE__1097___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1178___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1140_1259/sol_1178/WE__1178___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1178___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1140_1259/sol_1178/WE__1178___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1267___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1260_1379/sol_1267/WE__1267___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1267___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1260_1379/sol_1267/WE__1267___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1316___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1260_1379/sol_1316/WE__1316___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1316___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1260_1379/sol_1316/WE__1316___________DER_ANCILLARY___________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1352___________cal_rds_________________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_1260_1379/sol_1352/WE__1352___________CAL_RDS_________________P01.CSV"
+      },
+      {
+        "id": "urn:nasa:pds:mars2020_meda:data_derived_env:we__1352___________der_ancillary___________p",
+        "version": "1.0",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_1260_1379/sol_1352/WE__1352___________DER_ANCILLARY___________P01.CSV"
+      }
+    ]
+  },
+  "method": {
+    "description": "Arithmetic mean of calibrated TOP 3 readings from matching stationary rover geometry near each selected waypoint.",
+    "solarZenithDegrees": [
+      35,
+      45
+    ],
+    "maxRoverTiltDegrees": 15,
+    "siteRadiusMeters": 100,
+    "minimumSamples": 60
+  },
+  "sites": [
+    {
+      "id": "sol-0154",
+      "latitude": 18.428372,
+      "longitude": 77.452029,
+      "meanWm2": 0.09116808,
+      "count": 4476,
+      "sols": [
+        154
+      ],
+      "utcStart": "2021-07-26T18:51:57Z",
+      "utcEnd": "2021-07-27T01:28:16Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0154___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0154___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0380",
+      "latitude": 18.446228,
+      "longitude": 77.451474,
+      "meanWm2": 0.10632012,
+      "count": 3111,
+      "sols": [
+        380
+      ],
+      "utcStart": "2022-03-16T00:05:36Z",
+      "utcEnd": "2022-03-16T00:57:27Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0380___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0380___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0403",
+      "latitude": 18.460616,
+      "longitude": 77.429997,
+      "meanWm2": 0.09933751,
+      "count": 6252,
+      "sols": [
+        403
+      ],
+      "utcStart": "2022-04-08T15:35:33Z",
+      "utcEnd": "2022-04-08T20:21:47Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0403___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0403___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0614",
+      "latitude": 18.453644,
+      "longitude": 77.399154,
+      "meanWm2": 0.07872921,
+      "count": 5465,
+      "sols": [
+        614
+      ],
+      "utcStart": "2022-11-11T12:16:45Z",
+      "utcEnd": "2022-11-11T17:01:17Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0614___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0614___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0756",
+      "latitude": 18.471346,
+      "longitude": 77.377372,
+      "meanWm2": 0.06410987,
+      "count": 2454,
+      "sols": [
+        756
+      ],
+      "utcStart": "2023-04-06T08:23:49Z",
+      "utcEnd": "2023-04-06T14:42:52Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0756___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0756___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0785",
+      "latitude": 18.482727,
+      "longitude": 77.368631,
+      "meanWm2": 0.11530754,
+      "count": 2443,
+      "sols": [
+        785
+      ],
+      "utcStart": "2023-05-06T03:35:25Z",
+      "utcEnd": "2023-05-06T09:55:52Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0785___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0785___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0910",
+      "latitude": 18.483289,
+      "longitude": 77.350704,
+      "meanWm2": 0.08613173,
+      "count": 5186,
+      "sols": [
+        910
+      ],
+      "utcStart": "2023-09-11T13:27:30Z",
+      "utcEnd": "2023-09-11T20:02:35Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0910___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0910___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-0995",
+      "latitude": 18.499663,
+      "longitude": 77.351307,
+      "meanWm2": 0.11389333,
+      "count": 3032,
+      "sols": [
+        995
+      ],
+      "utcStart": "2023-12-07T22:08:46Z",
+      "utcEnd": "2023-12-08T03:41:59Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0995___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__0995___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1020",
+      "latitude": 18.492662,
+      "longitude": 77.340046,
+      "meanWm2": 0.08029895,
+      "count": 2974,
+      "sols": [
+        1020
+      ],
+      "utcStart": "2024-01-02T14:07:04Z",
+      "utcEnd": "2024-01-02T19:59:17Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1020___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1020___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1097",
+      "latitude": 18.492122,
+      "longitude": 77.326535,
+      "meanWm2": 0.0699662,
+      "count": 6388,
+      "sols": [
+        1097
+      ],
+      "utcStart": "2024-03-21T18:00:25Z",
+      "utcEnd": "2024-03-21T21:57:35Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1097___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1097___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1178",
+      "latitude": 18.496112,
+      "longitude": 77.303836,
+      "meanWm2": 0.07483132,
+      "count": 3662,
+      "sols": [
+        1178
+      ],
+      "utcStart": "2024-06-13T01:58:13Z",
+      "utcEnd": "2024-06-13T02:59:14Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1178___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1178___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1267",
+      "latitude": 18.484194,
+      "longitude": 77.300604,
+      "meanWm2": 0.06274967,
+      "count": 3404,
+      "sols": [
+        1267
+      ],
+      "utcStart": "2024-09-12T11:39:51Z",
+      "utcEnd": "2024-09-12T15:46:58Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1267___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1267___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1316",
+      "latitude": 18.468805,
+      "longitude": 77.291763,
+      "meanWm2": 0.06814835,
+      "count": 3792,
+      "sols": [
+        1316
+      ],
+      "utcStart": "2024-11-01T18:59:57Z",
+      "utcEnd": "2024-11-02T00:33:02Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1316___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1316___________der_ancillary___________p"
+      ]
+    },
+    {
+      "id": "sol-1352",
+      "latitude": 18.459384,
+      "longitude": 77.272323,
+      "meanWm2": 0.06280857,
+      "count": 3294,
+      "sols": [
+        1352
+      ],
+      "utcStart": "2024-12-08T18:18:32Z",
+      "utcEnd": "2024-12-09T00:21:29Z",
+      "productIds": [
+        "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__1352___________cal_rds_________________p",
+        "urn:nasa:pds:mars2020_meda:data_derived_env:we__1352___________der_ancillary___________p"
+      ]
+    }
+  ]
+}
